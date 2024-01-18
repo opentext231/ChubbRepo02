@@ -14,7 +14,7 @@
 	<Dependencies/>
 	<SourceFolder>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-C41C03CB4E88"
+			id="00505601-D6D4-A1EE-AD86-FFAE8220AD78"
 			path="Underwriting/Java/CM8DB_Java/Archive"
 			type="com.cordys.cws.runtime.types.folder.StudioFolder"
 		/>

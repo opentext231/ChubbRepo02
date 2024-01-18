@@ -2413,8 +2413,10 @@
 							
 							
 							
+							
 							<div
 								class="dropup pull-right">      
+								
 								
 								
 								
@@ -2431,10 +2433,12 @@
 									
 									
 									
+									
 									<span
 										class="caret"
 									/>
 								</button>      
+								
 								
 								
 								
@@ -2499,6 +2503,7 @@
 										class="btn btn-default dropdown-toggle"
 										type="button"
 										data-toggle="dropdown">Actions 
+										
 										
 										
 										
@@ -4720,12 +4725,12 @@ function getCompanyCodeResult(){
 	<InstanceSchemaFragments/>
 	<Javascripts>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-BA2D0FE98E88"
+			id="00505601-D6D4-A1EE-AD86-DE156129AD78"
 			path="Underwriting/Web/com/cica/uw/scripts/jquery.min.js"
 			type="com.cordys.cws.documenttypes.javascript.Javascript"
 		/>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-BA2D0FEF0E88"
+			id="00505601-D6D4-A1EE-AD86-DE1561382D78"
 			path="Underwriting/Web/com/cica/uw/scripts/bootstrap.min.js"
 			type="com.cordys.cws.documenttypes.javascript.Javascript"
 		/>
@@ -4734,22 +4739,22 @@ function getCompanyCodeResult(){
 	<Representations/>
 	<StyleSheets>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-BA2D0FBE8E88"
+			id="00505601-D6D4-A1EE-AD86-DE1560FE2D78"
 			path="Underwriting/Web/com/cica/uw/styles/customStyleTraining.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-BA2D0FDE8E88"
+			id="00505601-D6D4-A1EE-AD86-DE15611A2D78"
 			path="Underwriting/Web/com/cica/uw/styles/bootstrap.min.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-BA2D0FDA8E88"
+			id="00505601-D6D4-A1EE-AD86-DE1561122D78"
 			path="Underwriting/Web/com/cica/uw/styles/CaseTask.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-BA2D0FDC8E88"
+			id="00505601-D6D4-A1EE-AD86-DE1561162D78"
 			path="Underwriting/Web/com/cica/uw/styles/Cascading Style Sheet.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>

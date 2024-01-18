@@ -600,12 +600,12 @@ function RejectTaskDynamicsOutboundModel_OnRequest(eventObject)
 	<Representations/>
 	<StyleSheets>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-CA9D95FC8E88"
+			id="00505601-D6D4-A1EE-AD87-25EB1980ED78"
 			path="PFP/Web/Css/PFP_bootstrap1.min.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-CA9D95F88E88"
+			id="00505601-D6D4-A1EE-AD87-25EB19766D78"
 			path="PFP/Web/Css/PFP_CaseTask.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>

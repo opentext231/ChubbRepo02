@@ -234,12 +234,12 @@
 	<InstanceSchemaFragments/>
 	<Javascripts>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-CA9D95ED0E88"
+			id="00505601-D6D4-A1EE-AD87-25EB1954ED78"
 			path="PFP/Web/javascript/PFP_bootstrap1.min.js"
 			type="com.cordys.cws.documenttypes.javascript.Javascript"
 		/>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-CA9D95E90E88"
+			id="00505601-D6D4-A1EE-AD87-25EB194CED78"
 			path="PFP/Web/javascript/PFP_jquery1.js"
 			type="com.cordys.cws.documenttypes.javascript.Javascript"
 		/>
@@ -248,17 +248,17 @@
 	<Representations/>
 	<StyleSheets>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-CA9D95FE8E88"
+			id="00505601-D6D4-A1EE-AD87-25EB19856D78"
 			path="PFP/Web/Css/PFP_bootstrap.min.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-CA9D95F88E88"
+			id="00505601-D6D4-A1EE-AD87-25EB19766D78"
 			path="PFP/Web/Css/PFP_CaseTask.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-CA9D95FC8E88"
+			id="00505601-D6D4-A1EE-AD87-25EB1980ED78"
 			path="PFP/Web/Css/PFP_bootstrap1.min.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>

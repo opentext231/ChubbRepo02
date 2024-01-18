@@ -404,7 +404,7 @@ function getCurrentDate()
 	<Representations/>
 	<StyleSheets>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-BA2D0FB30E88"
+			id="00505601-D6D4-A1EE-AD86-DE1560DD2D78"
 			path="Underwriting/Web/com/cica/uw/styles/UW_Demo_CaseScreen.css"
 			type="com.cordys.cws.documenttypes.css.Css"
 		/>

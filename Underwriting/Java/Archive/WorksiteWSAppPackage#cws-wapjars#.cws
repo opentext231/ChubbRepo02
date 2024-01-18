@@ -135,7 +135,7 @@
 	</Dependencies>
 	<SourceFolder>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-C29DE6EACE88"
+			id="00505601-D6D4-A1EE-AD86-FCB224FCAD78"
 			path="Underwriting/Java/Source/com/cica/worksite"
 			type="com.cordys.cws.runtime.types.folder.StudioFolder"
 		/>

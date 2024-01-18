@@ -36,7 +36,7 @@
 	</SecurityDescriptor>
 	<SourceFolder>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-B82B6C908E88"
+			id="00505601-D6D4-A1EE-AD86-DBDA59BB6D78"
 			path="Underwriting/XMLStore"
 			type="com.cordys.cws.runtime.types.folder.StudioFolder"
 		/>

@@ -2496,7 +2496,7 @@ function updateTaskTimer(inputParam){
 	<deliveryModels/>
 	<image>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-BA2D10060E88"
+			id="00505601-D6D4-A1EE-AD86-DE1561602D78"
 			path="Underwriting/Web/com/cica/uw/Icons/PolicySearch.png"
 			type="com.cordys.cws.documenttypes.image.Png"
 		/>

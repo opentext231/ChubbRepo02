@@ -376,6 +376,7 @@
 									
 									
 									
+									
 									<span
 										class="caret"
 									/>
@@ -602,7 +603,7 @@ function btn_submit_Click(eventObject)
 	<InstanceSchemaFragments/>
 	<Javascripts>
 		<uri
-			id="005056B1-D319-A1EE-A4D4-BA2D0FAD8E88"
+			id="00505601-D6D4-A1EE-AD86-DE1560CE2D78"
 			path="Underwriting/Web/com/cica/Worksite/scripts/SaveWSdetails.js"
 			type="com.cordys.cws.documenttypes.javascript.Javascript"
 		/>
