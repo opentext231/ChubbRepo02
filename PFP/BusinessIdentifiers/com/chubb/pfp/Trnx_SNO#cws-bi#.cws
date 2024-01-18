@@ -1,0 +1,30 @@
+
+<BusinessIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.businessidentifier.BusinessIdentifier"
+	RuntimeDocumentID="005056A2-27FA-A1EE-869A-D79DF5B6419F">
+	<DocumentID>005056A2-27FA-A1EE-869A-D79DF5B6019F</DocumentID>
+	<Name>Trnx_SNO</Name>
+	<Description>Trnx_SNO</Description>
+	<CreatedBy>Raghu</CreatedBy>
+	<CreationDate>2023-07-04T13:11:39.946</CreationDate>
+	<Notes/>
+	<DataType>1</DataType>
+	<Precision>0</Precision>
+	<TranslatableDescription/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+			RuntimeDocumentID="005056A2-27FA-A1EE-869A-D79DF5B3C19F">
+			<DocumentID>005056A2-27FA-A1EE-869A-D79DF5B3819F</DocumentID>
+			<Name>005056A2-27FA-A1EE-869A-D79DF5B3819F</Name>
+			<Description>005056A2-27FA-A1EE-869A-D79DF5B3819F</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-04T13:11:39.941</CreationDate>
+			<Notes/>
+			<DeveloperText></DeveloperText>
+			<Identifier/>
+		</TranslatableText>
+	</TranslatableName>
+</BusinessIdentifier>

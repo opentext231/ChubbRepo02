@@ -1,0 +1,13 @@
+
+<QualifiedNameRoot
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.cws.namespace.qualifiedname.QualifiedNameRoot"
+	typeVersion="9bd1dc20-2f5e-11e3-aa6e-0800200c9a66"
+	RuntimeDocumentID="005056A2-27FA-A1EE-82D4-82191EB5019E">
+	<DocumentID>005056A2-27FA-A1EE-82D4-82191EB4C19E</DocumentID>
+	<Name>runtimeQNR for folder</Name>
+	<Description>runtimeQNR for folder</Description>
+	<CreatedBy>Raghu</CreatedBy>
+	<CreationDate>2023-06-15T09:20:32.01</CreationDate>
+	<Notes/>
+</QualifiedNameRoot>

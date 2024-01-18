@@ -1,0 +1,35 @@
+
+<RoleDesignTime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.organization.role.RoleDesignTime"
+	typeVersion="0242a425-d150-11e7-e026-4d289331252b"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8694-03B42EBD019F">
+	<DocumentID>005056A2-27FA-A1EE-8694-03B42EBCC19F</DocumentID>
+	<Name>PFP SLA Admin</Name>
+	<Description>PFP SLA Admin</Description>
+	<CreatedBy>Raghu</CreatedBy>
+	<CreationDate>2023-07-04T09:50:21.562</CreationDate>
+	<Notes/>
+	<DistinguishedName>cn=#roleName#, cn=#ISVPName#, #LDAPRoot#</DistinguishedName>
+	<type>Functional</type>
+	<Subroles/>
+	<Superroles/>
+	<configuredTasks>
+		<ConfiguredTask
+			type="com.cordys.task.ConfiguredTask"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8694-03B42EBB419F">
+			<DocumentID>005056A2-27FA-A1EE-8694-03B42EBB019F</DocumentID>
+			<Name>PFP_SLAConfiguration_005056A2-27FA-A1EE-8694-03B42EBB019F</Name>
+			<Description>PFP_SLAConfiguration_005056A2-27FA-A1EE-8694-03B42EBB019F</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-04T09:50:21.562</CreationDate>
+			<Notes/>
+			<configuredTaskParts/>
+			<uiTask>
+				<uri
+					id="005056A2-27FA-A1EE-868B-D87BCF15019F"
+				/>
+			</uiTask>
+		</ConfiguredTask>
+	</configuredTasks>
+</RoleDesignTime>

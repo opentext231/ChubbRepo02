@@ -1,0 +1,42 @@
+
+<Schedule
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.scheduler.Schedule"
+	typeVersion="002346V0-0008-71DF-DFF5-1F210914E83B"
+	RuntimeDocumentID="005056A2-27FA-A1EE-95B5-8EC6033E01A7">
+	<DocumentID>005056A2-27FA-A1EE-95B5-8EC6033DC1A7</DocumentID>
+	<Name>PFP_CreationOfTasks</Name>
+	<Description>PFP_CreationOfTasks</Description>
+	<CreatedBy>Raghu</CreatedBy>
+	<CreationDate>2023-09-19T11:16:04.959</CreationDate>
+	<Notes/>
+	<Count>-1</Count>
+	<ScheduleType>Hourly</ScheduleType>
+	<ScheduleXML>
+		<schedule
+			xmlns="http://schemas.cordys.com/scheduler/1.0"
+			name="PFP_CreationOfTasks"
+			count="-1"
+			autodeploy="false"
+			targetLastModified="2023-10-20T06:17:53.092">
+			<datetime>
+				<hourly>
+					<minutes>10</minutes>
+				</hourly>
+			</datetime>
+			<parameters
+				xmlns="http://schemas.cordys.com/scheduler/1.0">
+				<PFP_TaskCreation
+					xmlns="http://schemas.cordys.com/default"
+				/>
+			</parameters>
+		</schedule>
+	</ScheduleXML>
+	<TargetType>webservice</TargetType>
+	<ExternalAction/>
+	<WebserviceBindingOperation>
+		<uri
+			id="005056A2-27FA-A1EE-95B5-7BC8F4E641A7"
+		/>
+	</WebserviceBindingOperation>
+</Schedule>

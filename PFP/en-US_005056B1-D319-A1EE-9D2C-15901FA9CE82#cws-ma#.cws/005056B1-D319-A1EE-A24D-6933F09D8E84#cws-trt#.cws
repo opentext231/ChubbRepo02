@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="005056B1-D319-A1EE-A24D-6933F09DCE84">
+	<DocumentID>005056B1-D319-A1EE-A24D-6933F09D8E84</DocumentID>
+	<Name>005056B1-D319-A1EE-A24D-6933F09D8E84</Name>
+	<Description>Source Calculation</Description>
+	<CreatedBy>Geetha</CreatedBy>
+	<CreationDate>2023-11-22T12:50:07.054</CreationDate>
+	<Notes/>
+	<Text>Source Calculation</Text>
+	<Language>
+		<uri
+			id="005056B1-D319-A1EE-9D2C-15901FAA4E82"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="005056B1-D319-A1EE-A24D-6933F09D0E84"
+		/>
+	</TextIdentifier>
+</TranslatedText>

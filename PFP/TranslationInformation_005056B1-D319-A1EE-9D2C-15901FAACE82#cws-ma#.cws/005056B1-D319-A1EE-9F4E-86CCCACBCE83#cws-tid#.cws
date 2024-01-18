@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="005056B1-D319-A1EE-9F4E-86CCCACC0E83">
+	<DocumentID>005056B1-D319-A1EE-9F4E-86CCCACBCE83</DocumentID>
+	<Name>005056B1-D319-A1EE-9F4E-86CCCACBCE83</Name>
+	<Description>Company  Code/LOB</Description>
+	<CreatedBy>Pradeep</CreatedBy>
+	<CreationDate>2023-11-07T06:54:55.835</CreationDate>
+	<Notes/>
+	<DefaultText>Company  Code/LOB</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="005056B1-D319-A1EE-9D2C-15901FAB4E82"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="005056B1-D319-A1EE-9F4E-86CCCACC4E83"
+		/>
+	</Translations>
+</TextIdentifier>

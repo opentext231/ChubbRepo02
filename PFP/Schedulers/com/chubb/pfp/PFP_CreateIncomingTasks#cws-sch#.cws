@@ -1,0 +1,63 @@
+
+<Schedule
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.scheduler.Schedule"
+	typeVersion="002346V0-0008-71DF-DFF5-1F210914E83B"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8C08-ED65432501A0">
+	<DocumentID>005056A2-27FA-A1EE-8C08-ED654324C1A0</DocumentID>
+	<Name>PFP_CreateIncomingTasks</Name>
+	<Description>PFP_CreateIncomingTasks</Description>
+	<CreatedBy>Raghu</CreatedBy>
+	<CreationDate>2023-08-01T04:36:11.404</CreationDate>
+	<Notes/>
+	<Count>-1</Count>
+	<ScheduleType>Hourly</ScheduleType>
+	<ScheduleXML>
+		<schedule
+			xmlns="http://schemas.cordys.com/scheduler/1.0"
+			name="PFP_CreateIncomingTasks"
+			count="-1"
+			autodeploy="true"
+			targetLastModified="2023-08-01T04:20:42.834"
+			msgHolderLastModified="2023-10-20T06:17:55.289">
+			<datetime>
+				<hourly>
+					<minutes>0</minutes>
+				</hourly>
+			</datetime>
+			<parameters
+				xmlns="http://schemas.cordys.com/scheduler/1.0">
+				<ExecuteProcess
+					xmlns="http://schemas.cordys.com/bpm/execution/1.0">
+					<type>definition</type>
+					<receiver>true</receiver>
+					<source>Scheduler Engine</source>
+					<modelSpace/>
+					<message>
+						<Message
+							xmlns="">No Message</Message>
+					</message>
+				</ExecuteProcess>
+			</parameters>
+		</schedule>
+	</ScheduleXML>
+	<TargetType>bpm</TargetType>
+	<ExternalAction>
+		<BPMExternalAction
+			type="com.cordys.bpm.BPMExternalAction"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8C08-ED65432341A0">
+			<DocumentID>005056A2-27FA-A1EE-8C08-ED65432301A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8C08-ED65432301A0</Name>
+			<Description>005056A2-27FA-A1EE-8C08-ED65432301A0</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-08-01T04:36:11.404</CreationDate>
+			<Notes/>
+			<ContainedProcess>
+				<uri
+					id="005056A2-27FA-A1EE-8C06-3B2E0AA681A0"
+				/>
+			</ContainedProcess>
+		</BPMExternalAction>
+	</ExternalAction>
+	<WebserviceBindingOperation/>
+</Schedule>

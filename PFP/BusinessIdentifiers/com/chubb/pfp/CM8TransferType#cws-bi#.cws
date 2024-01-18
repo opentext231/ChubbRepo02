@@ -1,0 +1,30 @@
+
+<BusinessIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.businessidentifier.BusinessIdentifier"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8D6A-11977E3F81A0">
+	<DocumentID>005056A2-27FA-A1EE-8D6A-11977E3F41A0</DocumentID>
+	<Name>CM8TransferType</Name>
+	<Description>CM8TransferType</Description>
+	<CreatedBy>Geetha Valaja</CreatedBy>
+	<CreationDate>2023-08-08T05:17:58.896</CreationDate>
+	<Notes/>
+	<DataType>1</DataType>
+	<Precision>0</Precision>
+	<TranslatableDescription/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8D6A-B9B17FD541A0">
+			<DocumentID>005056A2-27FA-A1EE-8D6A-B9B17FD501A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8D6A-B9B17FD501A0</Name>
+			<Description>005056A2-27FA-A1EE-8D6A-B9B17FD501A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-08T05:17:58.896</CreationDate>
+			<Notes/>
+			<DeveloperText></DeveloperText>
+			<Identifier/>
+		</TranslatableText>
+	</TranslatableName>
+</BusinessIdentifier>

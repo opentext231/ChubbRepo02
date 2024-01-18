@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="005056B1-D319-A1EE-A24D-6933F07B4E84">
+	<DocumentID>005056B1-D319-A1EE-A24D-6933F07B0E84</DocumentID>
+	<Name>005056B1-D319-A1EE-A24D-6933F07B0E84</Name>
+	<Description>UpdatePFP_ReviewActionSummary</Description>
+	<CreatedBy>Geetha</CreatedBy>
+	<CreationDate>2023-11-22T12:49:59.732</CreationDate>
+	<Notes/>
+	<Text>UpdatePFP_ReviewActionSummary</Text>
+	<Language>
+		<uri
+			id="005056B1-D319-A1EE-9D2C-15901FAA4E82"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="005056B1-D319-A1EE-A24D-6933F07A8E84"
+		/>
+	</TextIdentifier>
+</TranslatedText>

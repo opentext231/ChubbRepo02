@@ -1,0 +1,416 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8BDF-8171B94841A0">
+	<DocumentID>005056A2-27FA-A1EE-8BDF-8171B94801A0</DocumentID>
+	<Name>PFP_Select_CreateTask</Name>
+	<Description>PFP_Select_CreateTask</Description>
+	<CreatedBy>manishas</CreatedBy>
+	<CreationDate>2023-07-31T08:48:41.602</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead/>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop">
+					<xforms:group
+						appearance="group"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+						id="group1"
+						wcpforms:layout="vertical"
+						wcpforms:class="v_layout"
+						wcpforms:size="400px 60px"
+						wcpforms:labelalign="ontop">
+						<xforms:group
+							appearance="controlbox"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+							id="controlbox9"
+							controltype="button"
+							wcpforms:layout="horizontal"
+							wcpforms:class="f_layout"
+							wcpforms:align="left_align"
+							wcpforms:size="120px 30px"
+							wcpforms:anchors="null null 10.01px 20.01px"
+							wcpforms:position="auto auto">
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="Cancel"
+								wcpforms:class="h_button"
+								wcpforms:size="null 22px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89AE-5190BDCD01A0">Cancel</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:Cancel_Click/>
+								</xforms:action>
+							</xforms:trigger>
+						</xforms:group>
+						<xforms:group
+							appearance="controlbox"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+							id="controlbox11"
+							controltype="button"
+							wcpforms:layout="horizontal"
+							wcpforms:class="f_layout"
+							wcpforms:align="left_align"
+							wcpforms:size="120px 30px"
+							wcpforms:anchors="null null 150.01px 20.01px"
+							wcpforms:position="auto auto">
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="ManualTask"
+								wcpforms:class="h_button"
+								wcpforms:size="null 22px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89AE-5190BDCF01A0">Manual Task</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:ManualTask_Click/>
+								</xforms:action>
+							</xforms:trigger>
+						</xforms:group>
+						<xforms:group
+							appearance="controlbox"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+							id="controlbox5"
+							controltype="button"
+							wcpforms:layout="horizontal"
+							wcpforms:class="f_layout"
+							wcpforms:align="left_align"
+							wcpforms:size="110px 38px"
+							wcpforms:position="0px 10px">
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="RequestTask"
+								wcpforms:class="h_button"
+								wcpforms:size="null 22px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-8BE0-278C678781A0">Request Task</xforms:label>
+								<xforms:action
+									ev:event="xforms-activate">
+									<xforms:RequestTask_Click/>
+								</xforms:action>
+							</xforms:trigger>
+						</xforms:group>
+					</xforms:group>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[var selectedRequest = "";
+
+
+function dialogReturnValue()
+    {
+    var data = new Object();
+      
+		data.Type = selectedRequest;
+		
+                return data;
+    }
+    
+    
+function RequestTask_Click(eventObject)
+{
+    selectedRequest  = 'Create Task';
+    application.container.close();
+}
+function ManualTask_Click(eventObject)
+{
+    selectedRequest  = 'Manual Task';
+     application.container.close();
+}
+function Cancel_Click(eventObject)
+{
+    selectedRequest  = 'Cancel';
+    application.container.close();
+}
+function Form_InitDone(eventObject)
+{
+   //document.getElementById("feedback_wrapper").setAttribute("style","display: block; width:461px; height: 125px; margin: -62.5px 0px 0px -230.5px; left: 50%; top: 50%;");
+    //application.setDialogSize("461px","95px");
+    
+    if(application.event.data == '3')
+    {
+        document.getElementById("controlbox11").disabled = true;;        
+    }
+}]]>
+			</xformsscript>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>PFP_Select_CreateTask</taskDescription>
+	<taskName>PFP_Select_CreateTask</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts/>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets/>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BE1-2425FB49C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8BE1-2425FB4981A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8BE1-2425FB4981A0</Name>
+			<Description>005056A2-27FA-A1EE-8BE1-2425FB4981A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-31T09:29:48.797</CreationDate>
+			<Notes/>
+			<DeveloperText></DeveloperText>
+			<Identifier/>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BDF-BB7C558A81A0">
+			<DocumentID>005056A2-27FA-A1EE-8BDF-BB7C558A41A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8BDF-BB7C558A41A0</Name>
+			<Description>005056A2-27FA-A1EE-8BDF-BB7C558A41A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-31T08:53:36.916</CreationDate>
+			<Notes/>
+			<UIRef>button1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8BDF-BB7C558B01A0">
+					<DocumentID>005056A2-27FA-A1EE-8BDF-BB7C558AC1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8BDF-BB7C558AC1A0</Name>
+					<Description>005056A2-27FA-A1EE-8BDF-BB7C558AC1A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-31T08:53:36.916</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8BDF-8171B94801A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BDF-E0CA5311C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8BDF-E0CA531181A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8BDF-E0CA531181A0</Name>
+			<Description>005056A2-27FA-A1EE-8BDF-E0CA531181A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-31T08:53:36.916</CreationDate>
+			<Notes/>
+			<UIRef>RequestTask</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8BE1-42B436F681A0">
+					<DocumentID>005056A2-27FA-A1EE-8BE1-42B436F641A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8BE1-42B436F641A0</Name>
+					<Description>005056A2-27FA-A1EE-8BE1-42B436F641A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-31T09:32:33.201</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8BDF-8171B94801A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BDF-E0CA530D41A0">
+			<DocumentID>005056A2-27FA-A1EE-8BDF-E0CA530D01A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8BDF-E0CA530D01A0</Name>
+			<Description>005056A2-27FA-A1EE-8BDF-E0CA530D01A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-31T08:53:36.916</CreationDate>
+			<Notes/>
+			<UIRef>button2</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8BDF-E0CA530DC1A0">
+					<DocumentID>005056A2-27FA-A1EE-8BDF-E0CA530D81A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8BDF-E0CA530D81A0</Name>
+					<Description>005056A2-27FA-A1EE-8BDF-E0CA530D81A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-31T08:53:36.916</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8BDF-8171B94801A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BDF-F802925D01A0">
+			<DocumentID>005056A2-27FA-A1EE-8BDF-F802925CC1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8BDF-F802925CC1A0</Name>
+			<Description>005056A2-27FA-A1EE-8BDF-F802925CC1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-31T09:02:03.163</CreationDate>
+			<Notes/>
+			<UIRef>Cancel</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8BE0-278C678241A0">
+					<DocumentID>005056A2-27FA-A1EE-8BE0-278C678201A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8BE0-278C678201A0</Name>
+					<Description>005056A2-27FA-A1EE-8BE0-278C678201A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-31T09:02:03.168</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8BDF-8171B94801A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BE0-7149AA1C01A0">
+			<DocumentID>005056A2-27FA-A1EE-8BE0-7149AA1BC1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8BE0-7149AA1BC1A0</Name>
+			<Description>005056A2-27FA-A1EE-8BE0-7149AA1BC1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-31T09:13:07.045</CreationDate>
+			<Notes/>
+			<UIRef>ManualTask</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8BE0-7149AA1C81A0">
+					<DocumentID>005056A2-27FA-A1EE-8BE0-7149AA1C41A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8BE0-7149AA1C41A0</Name>
+					<Description>005056A2-27FA-A1EE-8BE0-7149AA1C41A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-31T09:13:07.045</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8BDF-8171B94801A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BE0-7149AA1081A0">
+			<DocumentID>005056A2-27FA-A1EE-8BE0-7149AA1041A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8BE0-7149AA1041A0</Name>
+			<Description>005056A2-27FA-A1EE-8BE0-7149AA1041A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-31T09:13:07.05</CreationDate>
+			<Notes/>
+			<UIRef>ManualTask</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8BE0-7149AA1101A0">
+					<DocumentID>005056A2-27FA-A1EE-8BE0-7149AA10C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8BE0-7149AA10C1A0</Name>
+					<Description>005056A2-27FA-A1EE-8BE0-7149AA10C1A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-31T09:13:07.05</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8BDF-8171B94801A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BDF-EBB5015681A0">
+			<DocumentID>005056A2-27FA-A1EE-8BDF-EBB5015641A0</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-31T08:53:36.916</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

@@ -1,0 +1,3187 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8987-67EBC40381A0">
+	<DocumentID>005056A2-27FA-A1EE-8987-67EBC40341A0</DocumentID>
+	<Name>PFPCustomerLookUP</Name>
+	<Description>PFPCustomerLookUP</Description>
+	<CreatedBy>Geetha Valaja</CreatedBy>
+	<CreationDate>2023-07-19T10:22:15.608</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead>
+				<script
+					src="javascript/PFP_jquery-search.js"
+					documentID="005056A2-27FA-A1EE-8994-FC962C1F01A0"
+				/>
+				<script
+					src="javascript/PFPjquery.min.js"
+					documentID="005056A2-27FA-A1EE-8988-DD3B224541A0"
+				/>
+				<style
+					src="Css/PFP_bootstrap.min.css"
+					documentID="005056A2-27FA-A1EE-82E6-D5BC5DB1C19E"
+				/>
+				<style
+					src="Css/PFP_CascadingStyleSheet.css"
+					documentID="005056A2-27FA-A1EE-8987-67EBC3FC01A0"
+				/>
+				<style
+					src="Css/PFP_defaultUtil.css"
+					documentID="005056A2-27FA-A1EE-89C3-F9C9D57CC1A0"
+				/>
+				<xforms:model
+					id="GetXMLObjectOperationModel"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="false"
+					wcpforms:businessElement="tns:tuple"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false"
+					wcpforms:nontransactional="true">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+							src="http://schemas.cordys.com/1.0/xmlstore/GetXMLObject"
+							type="get"
+							operationName="GetXMLObject"
+							wcpforms:wsguid="005056A2-27FA-A1EE-8A82-05F94AB841A0">
+							<key
+								xmlns="http://schemas.cordys.com/1.0/xmlstore"
+								version=""
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/1.0/xmlstore</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/1.0/xmlstore</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+				</xforms:model>
+				<xforms:model
+					id="getDropDownValues"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="true"
+					wcpforms:businessElement="tns:dropdown_table"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+							src="http://schemas.cordys.com/PFPWSAppServerPackage/GetDropdownValuesByType"
+							type="get"
+							operationName="GetDropdownValuesByType"
+							wcpforms:wsguid="005056A2-27FA-A1EE-8A8A-9A0F7C42C1A0">
+							<Identifier
+								xmlns="http://schemas.cordys.com/PFPWSAppServerPackage"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<xforms:action
+						ev:event="xforms-onrequest">
+						<xforms:getDropDownValues_OnRequest/>
+					</xforms:action>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/PFPWSAppServerPackage</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/PFPWSAppServerPackage</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+				</xforms:model>
+				<xforms:model
+					id="MDMPolicySearchModel"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="false"
+					wcpforms:businessElement="tns:CustomerDetails"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+							src="http://schemas.cordys.com/default/PFP_MDMPolicySearch"
+							type="get"
+							operationName="PFP_MDMPolicySearch"
+							wcpforms:wsguid="005056A2-27FA-A1EE-89ED-4DF87008C1A0">
+							<CustomerID
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<PolicyNumber
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<FirstName
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<LastName
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<Gender
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<FNamePercent
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<LNamePercent
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<State
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<DateOfBirth
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<ServiceCenterCode
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<SearchMode
+								xmlns="http://schemas.cordys.com/default"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/default</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/default</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+				</xforms:model>
+				<xforms:model
+					id="GetClaimHistoryModel"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="false"
+					wcpforms:businessElement="tns:ClaimHistory"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50"
+					/>
+					<wcpforms:instanceschema/>
+					<wcpforms:xpathmetainfo/>
+				</xforms:model>
+				<xforms:model
+					id="GetOrganizationInfoModel"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="false"
+					wcpforms:businessElement="tns:GetOrganizationInfoResponse"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false"
+					wcpforms:nontransactional="true">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+							src="http://schemas.cordys.com/1.0/notification/GetOrganizationInfo"
+							type="get"
+							operationName="GetOrganizationInfo"
+							wcpforms:wsguid="005056A2-27FA-A1EE-8A83-3ABD148181A0"
+						/>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/1.0/notification</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/1.0/notification</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+				</xforms:model>
+			</xhead>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop"
+					wcpforms:customclass="primary-header">
+					<xforms:label
+						appearance="codesnippet"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+						id="text1"
+						wcpforms:class="v_layout"
+						wcpforms:size="null auto">
+						<div
+							xmlns=""
+							class="modal-header"
+							style="margin-top:-5% ;margin-left:-17px">
+							<h3>Policy/Customer Search</h3>
+						</div>
+					</xforms:label>
+					<xforms:group
+						appearance="group"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+						id="group2"
+						wcpforms:layout="vertical"
+						wcpforms:class="v_layout autoextent"
+						wcpforms:size="null auto"
+						wcpforms:labelalign="ontop">
+						<xforms:label
+							appearance="codesnippet"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+							id="text6"
+							wcpforms:class="h_layout"
+							wcpforms:size="15% 30px">
+							<span
+								xmlns=""
+								style="color: #333333!important;">
+								<small>Service Center</small>
+							</span>
+						</xforms:label>
+						<xforms:group
+							appearance="choicebox"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsChoicebox"
+							id="choicebox1"
+							wcpforms:customclass="ChoiceYN"
+							controltype="radio"
+							wcpforms:layout="horizontal"
+							wcpforms:class="h_layout autoextent"
+							wcpforms:size="null auto">
+							<xforms:select1
+								appearance="full"
+								unique-id="1"
+								id="USorCanada"
+								radioLabelId="radio1">
+								<xforms:label
+									wcpforms:class="v_label"
+								/>
+								<xforms:item
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsRadio"
+									id="radio1_1"
+									wcpforms:class="h_choicebox"
+									wcpforms:size="90px 35px">
+									<xforms:label
+										textIdentifier="005056A2-27FA-A1EE-8987-67EBC3F001A0">U.S.</xforms:label>
+									<xforms:value>0</xforms:value>
+								</xforms:item>
+								<xforms:item
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsRadio"
+									id="radio1_2"
+									wcpforms:class="h_choicebox"
+									wcpforms:size="90px 51.6667px">
+									<xforms:label
+										textIdentifier="005056A2-27FA-A1EE-8987-67EBC3EE81A0">Canada</xforms:label>
+									<xforms:value>1</xforms:value>
+								</xforms:item>
+							</xforms:select1>
+						</xforms:group>
+					</xforms:group>
+					<xforms:group
+						appearance="group"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+						id="group3"
+						wcpforms:customclass="V2"
+						wcpforms:layout="vertical"
+						wcpforms:class="h_layout autoextent"
+						wcpforms:size="13% auto"
+						wcpforms:labelalign="ontop">
+						<xforms:input
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+							id="PolicyNumber"
+							doEBIValidate="false"
+							wcpforms:class="v_layout_i"
+							wcpforms:size="100% 55px"
+							wcpforms:customclass="InputBorder">
+							<xforms:label
+								textIdentifier="005056A2-27FA-A1E9-A02C-55DDEC790147"
+								wcpforms:class="v_label">Policy#</xforms:label>
+						</xforms:input>
+						<xforms:input
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+							id="CustomerID"
+							doEBIValidate="false"
+							wcpforms:size="null 55px"
+							wcpforms:class="v_layout_i"
+							wcpforms:customclass="InputBorder">
+							<xforms:label
+								textIdentifier="005056A2-27FA-A1EE-839C-DC3F6ED3419F"
+								wcpforms:class="v_label">CustomerID</xforms:label>
+						</xforms:input>
+					</xforms:group>
+					<xforms:label
+						appearance="codesnippet"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+						id="text4"
+						wcpforms:class="h_layout"
+						wcpforms:size="5px 100px">
+						<div
+							xmlns=""
+							style="border-left: 1px solid lightgrey;height: 125px;margin:0 0 10% 2%"
+						/>
+					</xforms:label>
+					<xforms:group
+						appearance="group"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+						id="group1"
+						wcpforms:layout="vertical"
+						wcpforms:class="h_layout autoextent"
+						wcpforms:size="73.7227% auto"
+						wcpforms:labelalign="ontop">
+						<xforms:group
+							appearance="group"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+							id="group5"
+							wcpforms:layout="vertical"
+							wcpforms:class="v_layout_i autoextent"
+							wcpforms:size="99.7419% auto"
+							wcpforms:labelalign="ontop">
+							<xforms:input
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+								id="FirstName"
+								doEBIValidate="false"
+								tabIndex="4"
+								wcpforms:class="h_layout"
+								wcpforms:size="18% 65px"
+								wcpforms:customclass="InputBorder ">
+								<xforms:label
+									textIdentifier="005056A2-7798-A1E8-AA7D-8EC82FB94113"
+									wcpforms:class="v_label">First Name</xforms:label>
+							</xforms:input>
+							<xforms:input
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+								id="LastName"
+								doEBIValidate="false"
+								wcpforms:class="h_layout"
+								wcpforms:size="18% 65px"
+								wcpforms:customclass="InputBorder">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1E8-BA67-F2D850D0C13E"
+									wcpforms:class="v_label">Last Name</xforms:label>
+							</xforms:input>
+							<xforms:input
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+								id="BirthDate"
+								doEBIValidate="false"
+								wcpforms:displayformat="shortdate"
+								wcpforms:dataType="date"
+								wcpforms:required="false"
+								wcpforms:class="h_layout"
+								wcpforms:size="auto 66.6667px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1E8-A4FF-D642D3984131"
+									wcpforms:class="v_label">Date of Birth</xforms:label>
+							</xforms:input>
+							<xforms:select1
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsSelect"
+								id="Gender"
+								doEBIValidate="false"
+								initializeValueSets="0"
+								wcpforms:enumerated="false"
+								multiple="false"
+								wcpforms:dataType="string"
+								wcpforms:textalign="left_align"
+								tabIndex="4"
+								wcpforms:class="h_layout"
+								wcpforms:size="160.01px 65px"
+								wcpforms:customclass="InputBorder field_input   dropdowns">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EC-BDE3-F7D7E606C18A"
+									wcpforms:class="v_label">Gender</xforms:label>
+								<xforms:item>
+									<xforms:label>----Select----</xforms:label>
+									<xforms:value/>
+								</xforms:item>
+								<xforms:item>
+									<xforms:label>Male</xforms:label>
+									<xforms:value>Male</xforms:value>
+								</xforms:item>
+								<xforms:item>
+									<xforms:label>Female</xforms:label>
+									<xforms:value>Female</xforms:value>
+								</xforms:item>
+							</xforms:select1>
+						</xforms:group>
+						<xforms:group
+							appearance="group"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+							id="group6"
+							wcpforms:layout="vertical"
+							wcpforms:class="h_layout"
+							wcpforms:size="100% 49px"
+							wcpforms:labelalign="ontop">
+							<xforms:label
+								appearance="codesnippet"
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+								id="sliderText1"
+								wcpforms:class="h_layout"
+								wcpforms:size="18% 30px">
+								<div
+									xmlns="">
+									<input
+										id="slider1"
+										integer=""
+										style="width: 20%;height: 20px;border:none;color: #106bad;text-align: center;border-color:#e4e1dd;font-weight:normal !important;font-stretch:normal !important;font-style:normal !important;">
+										<span
+											style="color: #106bad;font-size:13px !important">%</span>
+									</input>
+									<input
+										onchange="fnSliderChange1()"
+										type="range"
+										style="margin-top: 0px;"
+										min="1"
+										max="100"
+										class="slider"
+										id="myRangeFN"
+									/>
+								</div>
+							</xforms:label>
+							<xforms:label
+								appearance="codesnippet"
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+								id="sliderText2"
+								wcpforms:class="h_layout"
+								wcpforms:size="18% 30px">
+								<div
+									xmlns="">
+									<input
+										id="slider2"
+										integer=""
+										style="width: 20%;height: 20px;border:none;color: #106bad;text-align: center;border-color:#e4e1dd;font-weight:normal !important;font-stretch:normal !important;font-style:normal !important;">
+										<span
+											style="color: #106bad;font-size:13px !important">%</span>
+									</input>
+									<input
+										onchange="fnSliderChange2()"
+										type="range"
+										style="margin-top: 0px;"
+										min="1"
+										max="100"
+										class="slider"
+										id="myRange2"
+									/>
+								</div>
+							</xforms:label>
+							<xforms:group
+								appearance="controlbox"
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+								id="controlbox4"
+								wcpforms:customclass="searchButtons"
+								controltype="button"
+								wcpforms:layout="horizontal"
+								wcpforms:class="f_layout"
+								wcpforms:align="left_align"
+								wcpforms:size="auto auto"
+								wcpforms:anchors="630px 20px 40.01px 0px"
+								wcpforms:position="630px 20px">
+								<xforms:trigger
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+									id="searchButton"
+									wcpforms:customclass="sec-btn"
+									wcpforms:class="h_button"
+									wcpforms:size="auto 30px">
+									<xforms:label
+										textIdentifier="005056A2-27FA-A1EE-89AE-5190BDC9C1A0">Search</xforms:label>
+									<xforms:action
+										ev:event="xforms-activate">
+										<xforms:searchButton_Click/>
+									</xforms:action>
+								</xforms:trigger>
+								<xforms:trigger
+									wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+									id="clearButton"
+									wcpforms:customclass="sec-btn"
+									wcpforms:class="h_button"
+									wcpforms:size="auto 30px">
+									<xforms:label
+										textIdentifier="005056A2-27FA-A1EE-89AE-5190BDC841A0">Clear</xforms:label>
+									<xforms:action
+										ev:event="xforms-activate">
+										<xforms:clearButton_Click/>
+									</xforms:action>
+								</xforms:trigger>
+							</xforms:group>
+							<xforms:select1
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsSelect"
+								id="State"
+								doEBIValidate="false"
+								wcpforms:enumerated="false"
+								multiple="false"
+								wcpforms:class="h_layout"
+								wcpforms:size="130px 65px"
+								wcpforms:customclass="InputBorder  dropdowns"
+								model="getDropDownValues"
+								initializeValueSets="0"
+								ref="tns:Description">
+								<xforms:label
+									textIdentifier="005056A2-7798-A1E8-AC0A-2138380CC11C"
+									wcpforms:class="v_label">State</xforms:label>
+								<xforms:itemset
+									xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+									model="getDropDownValues">
+									<xforms:label
+										ref="tns:Description"
+									/>
+									<xforms:value
+										ref="tns:Value"
+									/>
+								</xforms:itemset>
+								<xforms:action
+									ev:event="xforms-select-before-data-fill">
+									<xforms:State_BeforeFill/>
+								</xforms:action>
+							</xforms:select1>
+						</xforms:group>
+					</xforms:group>
+					<xforms:output
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+						id="recordsCount"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="20% 40.9896px"
+						wcpforms:required="false">
+						<xforms:label
+							textIdentifier="005056A2-27FA-A1EE-89B1-A4B3150441A0"
+							wcpforms:class="h_label left_align"
+							wcpforms:size="134px null">Record(s) Count:</xforms:label>
+					</xforms:output>
+					<xforms:group
+						appearance="group"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+						id="group4"
+						wcpforms:layout="vertical"
+						wcpforms:class="v_layout autoextent"
+						wcpforms:size="null auto"
+						wcpforms:labelalign="ontop">
+						<xforms:repeat
+							wcpforms:displayContextMenu="true"
+							wcpforms:toggleColumns="true"
+							wcpforms:movableColumns="false"
+							wcpforms:saveState="false"
+							wcpforms:autoInsert="true"
+							wcpforms:minRows="1"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsTable"
+							id="CustomerTable"
+							synchronizedDialogFrame="main"
+							isNavigationEnabled="true"
+							model="MDMPolicySearchModel"
+							wcpforms:gridtype="datagrid"
+							wcpforms:checkboxes="false"
+							wcpforms:layout="vertical"
+							wcpforms:class="v_layout_i autoextent"
+							wcpforms:size="100% auto"
+							nodeset="tns:PolicyNumber">
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblPolicyNumber"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px"
+								ref="tns:PolicyNumber"
+								wcpforms:dataType="string"
+								wcpforms:textalign="left_align">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-86CD-4FD1A645C19F">Policy Number</xforms:label>
+								<xforms:action
+									ev:event="xforms-before-data-bind">
+									<xforms:tblPolicyNumber_BeforeBind/>
+								</xforms:action>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblPersonId"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B31516C1A0">Person Id</xforms:label>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblName"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B3151541A0">Name</xforms:label>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblDOB"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B31513C1A0">DOB(MM/YY)</xforms:label>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblStateCode"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B3151241A0">State Code</xforms:label>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblCity"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B31510C1A0">City</xforms:label>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblAddress"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B3150F41A0">Address</xforms:label>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblIssueState"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B3150DC1A0">Issue State</xforms:label>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblCaseHistory"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B3150C41A0">CaseHistory</xforms:label>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblInteractions"
+								doEBIValidate="false"
+								wcpforms:size="100px 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B3150AC1A0">Interactions</xforms:label>
+							</xforms:output>
+							<xforms:output
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+								id="tblHouseholddata"
+								doEBIValidate="false"
+								wcpforms:size="auto 20.5729px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89B1-A4B31507C1A0">HouseHolddata</xforms:label>
+							</xforms:output>
+						</xforms:repeat>
+					</xforms:group>
+					<xforms:output
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsOutput"
+						id="claimcount"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="20% 40.9896px"
+						wcpforms:required="false">
+						<xforms:label
+							textIdentifier="005056A2-27FA-A1EE-89B1-A4B3150441A0"
+							wcpforms:class="h_label left_align"
+							wcpforms:size="134px null">Record(s) Count:</xforms:label>
+					</xforms:output>
+					<xforms:group
+						appearance="group"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+						id="group9"
+						wcpforms:layout="vertical"
+						wcpforms:class="v_layout autoextent"
+						wcpforms:size="null auto"
+						wcpforms:labelalign="ontop">
+						<xforms:group
+							appearance="controlbox"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+							id="controlbox7"
+							controltype="button"
+							wcpforms:layout="horizontal"
+							wcpforms:class="f_layout"
+							wcpforms:align="left_align"
+							wcpforms:size="153.997px 30px"
+							wcpforms:anchors="null null 0px 8.01px"
+							wcpforms:position="auto auto">
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="button4"
+								wcpforms:class="h_button"
+								wcpforms:size="null 30px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89AE-5190BDCD01A0">Button4</xforms:label>
+							</xforms:trigger>
+						</xforms:group>
+						<xforms:group
+							appearance="controlbox"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+							id="controlbox8"
+							controltype="button"
+							wcpforms:layout="horizontal"
+							wcpforms:class="f_layout"
+							wcpforms:align="left_align"
+							wcpforms:size="153.997px 30px"
+							wcpforms:anchors="null null 135.01px 8.01px"
+							wcpforms:position="auto auto">
+							<xforms:trigger
+								wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+								id="button2"
+								wcpforms:class="h_button"
+								wcpforms:size="null 30px">
+								<xforms:label
+									textIdentifier="005056A2-27FA-A1EE-89AE-5190BDD201A0">Button2</xforms:label>
+							</xforms:trigger>
+						</xforms:group>
+						<xforms:label
+							appearance="codesnippet"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+							id="text2"
+							wcpforms:class="h_layout"
+							wcpforms:size="50% 30px"> </xforms:label>
+					</xforms:group>
+					<xforms:group
+						appearance="group"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsGroup"
+						id="group8"
+						wcpforms:layout="vertical"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 62.01px"
+						wcpforms:labelalign="ontop">
+						<xforms:label
+							appearance="codesnippet"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+							id="CreateContact"
+							wcpforms:class="v_layout_i"
+							wcpforms:size="null 85px">
+							<a
+								xmlns=""
+								href="javascript:void(0);"
+								onclick="showPolicy()"
+								style="color:#98012e;">Create New Contact</a>
+						</xforms:label>
+						<xforms:label
+							appearance="codesnippet"
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsText"
+							id="text5"
+							wcpforms:class="v_layout_i"
+							wcpforms:size="null 30px">
+							<div
+								xmlns=""
+								id="buttonID"
+								class="row"
+								style="margin-left: 64px">
+								<div
+									class="col-md-8 col-lg-8 col-sm-8"> </div>
+								<div
+									class="col-md-4 col-lg-4 col-sm-4">
+									<button
+										class="h_button"
+										id="btnOk"
+										onclick="btnOkClick()"
+										style="width: 75px;float: right;background-color: #0000;color:#98012e;">Ok</button>
+									<button
+										class="h_button"
+										id="btnCancel"
+										onclick="btnCancel_Click()"
+										style="width: 95px;float: right;background-color: #0000;color:#98012e;">Cancel</button>
+								</div>
+							</div>
+						</xforms:label>
+					</xforms:group>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[var currentIndex = 0;
+var claimURL  = '';
+var policyURL = '';
+
+var option = {value: "",description: "-- Select --"};
+
+function Form_InitDone(eventObject)
+{
+
+OkayBtn.disable();
+document.getElementById("cancelbutton").style.marginLeft = '1030px';
+recordsCount.setValue("0");
+claimcount.setValue("0");
+USorCanada.setValue(0);
+   document.getElementById("myRangeFN").value=75;
+    document.getElementById("myRange2").value=75; 
+    fnSliderChange1();
+    fnSliderChange2();
+    CreateContact.hide();
+    text5.hide();
+    getLinksFromConfig();
+     if(application.event.data!=undefined)
+    {
+        var pNO=application.event.data.PolicyNumber;
+        var custd=application.event.data.CustomerID;
+        PolicyNumber.setValue(pNO);
+        CustomerID.setValue(custd);
+        searchCustomerDetails(pNO,"PolicySearch","","","","","","","","",custd);
+
+    }
+}
+function fnSliderChange1()
+{
+    document.getElementById("slider1").value= document.getElementById("myRangeFN").value;
+}
+function fnSliderChange2()
+{
+    document.getElementById("slider2").value= document.getElementById("myRange2").value;
+}
+
+function clearButton_Click(eventObject)
+{
+    PolicyNumber.setValue('');
+    CustomerID.setValue('');
+    FirstName.setValue('');
+    LastName.setValue('');
+    BirthDate.setValue('');
+    Gender.setValue('');
+    State.setValue('');
+    
+    
+    currentIndex = 0;
+    recordsCount.setValue(currentIndex);
+    claimcount.setValue(currentIndex);
+    
+   
+    CustomerTable.refresh();
+    ClaimDetailsTable.refresh();
+    
+    document.getElementById("myRangeFN").value=75;
+    document.getElementById("myRange2").value=75; 
+    
+    searchCustomerDetails("","","","","","","","","","","");
+    
+    fnSliderChange1();
+    fnSliderChange2();
+    
+    document.getElementById("btnOk").setAttribute("disabled","disabled");
+    document.getElementById("btnCancel").setAttribute("disabled","disabled"); 
+    
+       
+    OkayBtn.disable();
+    //cancelbutton.disable();
+}
+function searchButton_Click(eventObject)
+{
+    
+    CustomerTable.refresh();
+    //ClaimDetailsTable.refresh();
+    
+    MDMPolicySearchModel.refreshAllViews();
+    //GetClaimHistoryModel.refreshAllViews();
+    
+    var policyNumber = PolicyNumber.getValue();
+    var customerid = CustomerID.getValue();
+    var replace='W';
+    
+    if(customerid.length==10)
+    {
+     customerid=replace+customerid.slice(2);
+     
+    }
+    
+    
+    var firstName='',lastName='',gender='',fNamePercent='',lNamePercent='',State='',birthDate='',srvCenter='';
+    if(policyNumber=="" && customerid=="")
+    {
+        mode="CustomerSearch";
+        
+        policyNumber="";
+        firstName=FirstName.getValue();
+        lastName=LastName.getValue();
+        birthDate=BirthDate.getValue();
+        gender=Gender.getValue();
+        State=State.getValue();
+        fNamePercent=document.getElementById("slider1").value;
+        lNamePercent=document.getElementById("slider2").value;
+        srvCenter="";
+    }
+    else
+    {
+        mode="PolicySearch";
+        firstName="";
+        lastName="";
+        birthDate="";
+        gender="";
+        State="";
+        fNamePercent="";
+        lNamePercent="";
+        srvCenter="";
+    }
+    if(mode=="CustomerSearch" && (firstName=="" || firstName==undefined || firstName.trim().length==0))
+    {
+        application.notify("Please enter First Name");
+        FirstName.setFocus();
+        return false;
+    }
+    if(mode=="CustomerSearch" && (lastName=="" || lastName==undefined || lastName.trim().length ==0))
+    {
+        application.notify("Please enter Last Name");
+        LastName.setFocus();
+        return false;
+    }
+    if(mode=="PolicySearch")
+    {
+    if(customerid.length>10)
+        {
+        application.notify("CustomerID Length should be less than or equal to 10");
+        CustomerID.setFocus();
+        return false;
+        }
+    }
+     	
+ 
+searchCustomerDetails(policyNumber,mode,firstName,lastName,gender,fNamePercent,lNamePercent,State,birthDate,srvCenter,customerid);
+
+}
+
+function searchCustomerDetails(policyNumber,searchMode,firstName,lastName,gender,fnamePercent,lnamePercent,state,dateOfBirth,serviceCenter,Customerid)
+{
+    
+    MDMPolicySearchModel.clear();
+    var counter=0;
+    var claimcounter=0;
+    var summaryObj = [];
+	var claimobj=[];	
+					
+    if(USorCanada.getValue()==0)
+    {
+       serviceCenter='US';
+    }
+    else if(USorCanada.getValue()==1)
+    {
+      serviceCenter='CA';
+    }
+    
+    if(Gender.getValue()=='Female')
+    {
+    gender='F';
+    }
+    else if(Gender.getValue()=='Male')
+    {
+    gender='M';
+    }
+    firstName=FirstName.getValue()+' '+LastName.getValue();
+            
+    
+   var methodReq=MDMPolicySearchModel.getMethodRequest();   
+    cordys.setNodeText(methodReq,".//*[local-name()='PolicyNumber']",policyNumber);
+    cordys.setNodeText(methodReq,".//*[local-name()='CustomerID']",Customerid);
+    cordys.setNodeText(methodReq,".//*[local-name()='FirstName']",firstName);
+    cordys.setNodeText(methodReq,".//*[local-name()='LastName']",'');
+    cordys.setNodeText(methodReq,".//*[local-name()='Gender']",gender);
+    cordys.setNodeText(methodReq,".//*[local-name()='SearchMode']",searchMode);
+    cordys.setNodeText(methodReq,".//*[local-name()='FNamePercent']",fnamePercent);
+    cordys.setNodeText(methodReq,".//*[local-name()='LNamePercent']",lnamePercent);
+    cordys.setNodeText(methodReq,".//*[local-name()='DateOfBirth']",dateOfBirth);
+    cordys.setNodeText(methodReq,".//*[local-name()='State']",state);
+    cordys.setNodeText(methodReq,".//*[local-name()='ServiceCenterCode']",serviceCenter);
+     MDMPolicySearchModel.setMethodRequest(methodReq);
+     MDMPolicySearchModel.reset();
+     
+     if(!MDMPolicySearchModel.soapFaultOccurred)
+     {
+        var actionTuples=cordys.selectXMLNodes(MDMPolicySearchModel.getData(),".//*[local-name()='CustomerDetails']");    			
+        for(var j=0;j<actionTuples.length;j++)
+        {
+			
+	    summaryObj.push({	
+	    PolicyNumber: cordys.getNodeText(actionTuples[j],".//*[local-name()='PolicyNumber']",""),
+	    PolicyHolder: cordys.getNodeText(actionTuples[j],".//*[local-name()='Name']",""),
+	    tblDOB: cordys.getNodeText(actionTuples[j],".//*[local-name()='DOB']",""),
+	    Address1: cordys.getNodeText(actionTuples[j],".//*[local-name()='Address']",""),
+    	tblCity: cordys.getNodeText(actionTuples[j],".//*[local-name()='City']",""),
+    	CustomerID: cordys.getNodeText(actionTuples[j],".//*[local-name()='CustomerID']",""),
+    	State: cordys.getNodeText(actionTuples[j],".//*[local-name()='StateCode']",""),    	   
+		issuestate: cordys.getNodeText(actionTuples[j],".//*[local-name()='IssueState']","")		
+            });	
+			
+		claimobj.push({			
+        claimnumber: cordys.getNodeText(actionTuples[j],".//*[local-name()='ClaimNumber']",""),
+	    lossdate: cordys.getNodeText(actionTuples[j],".//*[local-name()='LossDate']",""),				
+	    claimtype: cordys.getNodeText(actionTuples[j],".//*[local-name()='ClaimType']",""),
+	    categorycode:cordys.getNodeText(actionTuples[j],".//*[local-name()='CategoryCode']",""),
+    	natureofloss: cordys.getNodeText(actionTuples[j],".//*[local-name()='Natureofloss']",""),
+    	claimstatus: cordys.getNodeText(actionTuples[j],".//*[local-name()='ClaimStatus']",""),
+	    claimamount: cordys.getNodeText(actionTuples[j],".//*[local-name()='ClaimAmount']",""),
+    	adjuster: cordys.getNodeText(actionTuples[j],".//*[local-name()='Adjuster']",""),			
+            });			
+        
+        }
+        
+       
+        
+        
+        CustomerTable.remove();
+     
+     
+        for(var i=0;i<summaryObj.length;i++)        
+        {
+            if(summaryObj[i].PolicyNumber == '' || summaryObj[i].PolicyNumber == undefined || summaryObj[i].PolicyNumber == null)
+            {
+            continue;
+            }
+        
+           CustomerTable.create();            
+            
+    	    var index = CustomerTable.getIndex();
+												
+            tblPolicyNumber[index].setValue(summaryObj[i].PolicyNumber);
+            tblPersonId[index].setValue(summaryObj[i].CustomerID);
+             tblName[index].setValue(summaryObj[i].PolicyHolder);
+			
+            var mdmDOB=summaryObj[i].tblDOB;
+                        
+			var receivedDOB = mdmDOB.replaceAll("-","/");
+            var displayFormat;
+	        if(receivedDOB.toString().length==8)
+			   {
+					var monthYear = receivedDOB.toString().substring(0,receivedDOB.toString().length-2);
+					displayFormat = monthYear.substring(4,monthYear.length)+monthYear.substring(2,4)
+			    }
+            else 
+				{
+					var getdob = receivedDOB.toString(8).length<4?"0"+receivedDOB.toString(8):receivedDOB.toString();
+					displayFormat = getdob.substring(5,8)+getdob.substring(2,4)
+				}
+				
+			tblDOB[index].setValue(displayFormat);
+            tblStateCode[index].setValue(summaryObj[i].State);
+            tblAddress[index].setValue(summaryObj[i].Address1);           
+            tblIssueState[index].setValue(summaryObj[i].issuestate);            
+            tblCity[index].setValue(summaryObj[i].tblCity);
+            tblCaseHistory[index].setValue('CaseHistory');
+			tblInteractions[index].setValue('Interactions');
+			tblHouseholddata[index].setValue('HouseHoldData');
+			
+            counter=counter+1;
+        }
+        recordsCount.setValue(counter);
+        
+        /*if(counter >= 1)
+        {
+            document.getElementById("CustomerTable").deleteRow(-1);
+        }*/
+        
+	//ClaimDetailsTable.remove();
+	
+	
+      /* for(var j=0;j<claimobj.length;j++)        
+        {
+            if(claimobj[j].claimnumber == '')
+            {
+            continue;
+            }
+            
+            ClaimDetailsTable.create();
+    	    var index = ClaimDetailsTable.getIndex();
+            TblClaimNumberr[index].setValue(claimobj[j].claimnumber);
+            
+            
+            
+            
+            tblClaimtypee[index].setValue(claimobj[j].claimtype);
+                        var mdmDOB=claimobj[j].lossdate;
+                        var receivedDOB = mdmDOB.replaceAll("-","/");
+                        lossDatee[index].setValue(receivedDOB);
+            
+            TblCatCodee[index].setValue(claimobj[j].categorycode);
+            TbLnoll[index].setValue(claimobj[j].natureofloss);
+            Tblcdss[index].setValue(claimobj[j].claimstatus);
+            tblcpaa[index].setValue(claimobj[j].claimamount);
+            tblann[index].setValue(claimobj[j].adjuster);
+           claimcounter=claimcounter+1;
+        }
+        claimcount.setValue(claimcounter); */
+        
+        
+       /*if(claimcounter>= 1)
+        {
+            document.getElementById("ClaimHistory").deleteRow(-1);
+        }*/
+		
+		
+						
+										  
+		
+	if(summaryObj.length>2)
+       {
+           document.getElementById("buttonID").style.marginTop = '-22px';
+           document.getElementsByClassName("xcontainercontent")[0].style.borderBottom = '1px solid #d3deed';
+           document.getElementsByClassName("xcontainercontent")[0].style.borderBottomRightRadius = '6px';
+           
+       }
+       else
+       {
+           //document.getElementById("buttonID").style.marginTop = '-45px';
+           document.getElementsByClassName("xcontainercontent")[0].style.borderBottom = '0px';
+       }
+     }
+      if(counter>=1)
+      {
+      document.getElementById("btnOk").setAttribute("disabled","disabled");
+    //btnOk.enable();
+    
+     OkayBtn.disable();
+	}
+}
+
+
+function getLinksFromConfig()
+{
+ var request = GetXMLObjectOperationModel.getMethodRequest();
+        cordys.setNodeText(request,".//*[local-name()='key']",'com/chubb/pfp/LinkConfig.xml');
+        GetXMLObjectOperationModel.setMethodRequest(request);
+        GetXMLObjectOperationModel.reset();
+        var b = GetXMLObjectOperationModel.getData();
+        var lnks=cordys.selectXMLNodes(b,".//*[local-name()='links']/*[local-name()='link']");
+        
+    claimURL = "",policyURL = "";
+    
+    GetOrganizationInfoModel.reset();
+  var curOrg=cordys.getNodeText(GetOrganizationInfoModel.getData(),".//*[local-name()='DN']","")
+    curOrg=curOrg.split(",")[0].split("=")[1];
+    
+    for (var i=0;i<lnks.length;i++) 
+    {
+	var org=cordys.getTextContent(cordys.getXMLAttribute(lnks[i],"","id",""),"id","");
+	
+	if(curOrg==org)
+	{
+	    claimURL = cordys.getNodeText(lnks[i],".//*[local-name()='ccpuLink']");
+            policyURL = cordys.getNodeText(lnks[i],".//*[local-name()='PccpuLink']");
+            break;
+	}			
+    }
+}
+
+
+function tblPolicyNumber_BeforeBind(eventObject)
+{
+    eventObject.srcElement.style.cursor = "pointer";
+    eventObject.srcElement.style.color = "blue";
+    eventObject.srcElement.style.textDecoration = "underline";
+    eventObject.srcElement.style.pointerEvents="all";
+    eventObject.srcElement.addEventListener("click",function(){
+    
+    	var url =policyURL+this.data.innerHTML;
+    	window.open(url, "policy", "scrollbars=yes,resizable=yes,top=200,left=600,width=600,height=400");
+    }); 
+}
+function TblClaimNumberr_BeforeBind(eventObject)
+{
+    eventObject.srcElement.style.cursor = "pointer";
+    eventObject.srcElement.style.color = "blue";
+    eventObject.srcElement.style.textDecoration = "underline";
+    eventObject.srcElement.style.pointerEvents="all";
+    
+    eventObject.srcElement.addEventListener("click",function(){
+    debugger;
+    eventObject.srcElement.style.textDecoration = "underline";    	
+        var url =claimURL+this.getValue()+"&B1=Submit&reqId=0226";
+    	window.open(url, "claims", "scrollbars=yes,resizable=yes,top=200,left=600,width=600,height=400");
+    });   
+}
+function getDropDownValues_OnRequest(eventObject)
+{
+    cordys.setNodeText(eventObject.request,".//*[local-name()='Identifier']",'State'); 
+}
+function State_BeforeFill(eventObject)
+{
+    State.addOption(option,false,0,false); 
+}
+function btnOkClick()
+{
+application.container.close();
+}
+function btnCancel_Click()
+{
+currentIndex =0;
+application.container.close();
+
+}
+function cancelbutton_Click(eventObject)
+{
+    currentIndex =0;
+    application.container.close();
+}
+]]>
+			</xformsscript>
+			<xforms:action
+				ev:event="xforms-initialize-done">
+				<xforms:Form_InitDone/>
+			</xforms:action>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption>Policy/CustomerSearch</caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>true</showOnStartPage>
+	<taskDescription>Policy/CustomerSearch</taskDescription>
+	<taskName>Policy/CustomerSearch</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts>
+		<uri
+			id="005056B1-D319-A1EE-A4D4-CA9D95EB0E88"
+			path="PFP/Web/javascript/PFP_jquery-search.js"
+			type="com.cordys.cws.documenttypes.javascript.Javascript"
+		/>
+		<uri
+			id="005056B1-D319-A1EE-A4D4-CA9D95EF0E88"
+			path="PFP/Web/javascript/PFPjquery.min.js"
+			type="com.cordys.cws.documenttypes.javascript.Javascript"
+		/>
+	</Javascripts>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets>
+		<uri
+			id="005056B1-D319-A1EE-A4D4-CA9D95FE8E88"
+			path="PFP/Web/Css/PFP_bootstrap.min.css"
+			type="com.cordys.cws.documenttypes.css.Css"
+		/>
+		<uri
+			id="005056B1-D319-A1EE-A4D4-CA9D95FA8E88"
+			path="PFP/Web/Css/PFP_CascadingStyleSheet.css"
+			type="com.cordys.cws.documenttypes.css.Css"
+		/>
+		<uri
+			id="005056B1-D319-A1EE-A4D4-CA9D95F68E88"
+			path="PFP/Web/Css/PFP_defaultUtil.css"
+			type="com.cordys.cws.documenttypes.css.Css"
+		/>
+	</StyleSheets>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8987-67EBC40101A0">
+			<DocumentID>005056A2-27FA-A1EE-8987-67EBC400C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8987-67EBC400C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8987-67EBC400C1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-19T10:22:15.608</CreationDate>
+			<Notes/>
+			<DeveloperText></DeveloperText>
+			<Identifier/>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8987-67EBC3F341A0">
+			<DocumentID>005056A2-27FA-A1EE-8987-67EBC3F301A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8987-67EBC3F301A0</Name>
+			<Description>005056A2-27FA-A1EE-8987-67EBC3F301A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-19T10:51:55.626</CreationDate>
+			<Notes/>
+			<UIRef>radio1_1</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8987-67EBC3EFC1A0">
+					<DocumentID>005056A2-27FA-A1EE-8987-67EBC3EF81A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8987-67EBC3EF81A0</Name>
+					<Description>005056A2-27FA-A1EE-8987-67EBC3EF81A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-19T10:51:55.626</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8987-67EBC3F141A0">
+			<DocumentID>005056A2-27FA-A1EE-8987-67EBC3F101A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8987-67EBC3F101A0</Name>
+			<Description>005056A2-27FA-A1EE-8987-67EBC3F101A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-19T10:51:55.626</CreationDate>
+			<Notes/>
+			<UIRef>radio1_2</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8987-67EBC3EE41A0">
+					<DocumentID>005056A2-27FA-A1EE-8987-67EBC3EE01A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8987-67EBC3EE01A0</Name>
+					<Description>005056A2-27FA-A1EE-8987-67EBC3EE01A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-19T10:51:55.626</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8988-DD3B224981A0">
+			<DocumentID>005056A2-27FA-A1EE-8988-DD3B224941A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8988-DD3B224941A0</Name>
+			<Description>005056A2-27FA-A1EE-8988-DD3B224941A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-19T11:06:42.349</CreationDate>
+			<Notes/>
+			<UIRef>CustomerID</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8988-DD3B224901A0">
+					<DocumentID>005056A2-27FA-A1EE-8988-DD3B2248C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8988-DD3B2248C1A0</Name>
+					<Description>005056A2-27FA-A1EE-8988-DD3B2248C1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-19T11:06:42.354</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AE-5190BDCE41A0">
+			<DocumentID>005056A2-27FA-A1EE-89AE-5190BDCE01A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AE-5190BDCE01A0</Name>
+			<Description>005056A2-27FA-A1EE-89AE-5190BDCE01A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:28:15.707</CreationDate>
+			<Notes/>
+			<UIRef>searchButton</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89AE-5190BDC981A0">
+					<DocumentID>005056A2-27FA-A1EE-89AE-5190BDC941A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89AE-5190BDC941A0</Name>
+					<Description>005056A2-27FA-A1EE-89AE-5190BDC941A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T05:29:27.096</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AE-5190BDCC41A0">
+			<DocumentID>005056A2-27FA-A1EE-89AE-5190BDCC01A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AE-5190BDCC01A0</Name>
+			<Description>005056A2-27FA-A1EE-89AE-5190BDCC01A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:28:15.702</CreationDate>
+			<Notes/>
+			<UIRef>clearButton</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89AE-5190BDC801A0">
+					<DocumentID>005056A2-27FA-A1EE-89AE-5190BDC7C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89AE-5190BDC7C1A0</Name>
+					<Description>005056A2-27FA-A1EE-89AE-5190BDC7C1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T05:29:27.096</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF260B41A0">
+			<DocumentID>005056A2-27FA-A1EE-89AF-9FAF260B01A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AF-9FAF260B01A0</Name>
+			<Description>005056A2-27FA-A1EE-89AF-9FAF260B01A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+			<Notes/>
+			<UIRef>tblann</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54E681A0">
+					<DocumentID>005056A2-27FA-A1EE-89B0-339C54E641A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B0-339C54E641A0</Name>
+					<Description>005056A2-27FA-A1EE-89B0-339C54E641A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T05:53:42.069</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF260941A0">
+			<DocumentID>005056A2-27FA-A1EE-89AF-9FAF260901A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AF-9FAF260901A0</Name>
+			<Description>005056A2-27FA-A1EE-89AF-9FAF260901A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+			<Notes/>
+			<UIRef>TblClaimNumberr</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF25FBC1A0">
+					<DocumentID>005056A2-27FA-A1EE-89AF-9FAF25FB81A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89AF-9FAF25FB81A0</Name>
+					<Description>005056A2-27FA-A1EE-89AF-9FAF25FB81A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF260741A0">
+			<DocumentID>005056A2-27FA-A1EE-89AF-9FAF260701A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AF-9FAF260701A0</Name>
+			<Description>005056A2-27FA-A1EE-89AF-9FAF260701A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:53:42.069</CreationDate>
+			<Notes/>
+			<UIRef>lossDatee</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8A87-7622D1C501A0">
+					<DocumentID>005056A2-27FA-A1EE-8A87-7622D1C4C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8A87-7622D1C4C1A0</Name>
+					<Description>005056A2-27FA-A1EE-8A87-7622D1C4C1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-24T12:37:52.551</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF260541A0">
+			<DocumentID>005056A2-27FA-A1EE-89AF-9FAF260501A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AF-9FAF260501A0</Name>
+			<Description>005056A2-27FA-A1EE-89AF-9FAF260501A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+			<Notes/>
+			<UIRef>tblClaimtypee</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF25F8C1A0">
+					<DocumentID>005056A2-27FA-A1EE-89AF-9FAF25F881A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89AF-9FAF25F881A0</Name>
+					<Description>005056A2-27FA-A1EE-89AF-9FAF25F881A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF260341A0">
+			<DocumentID>005056A2-27FA-A1EE-89AF-9FAF260301A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AF-9FAF260301A0</Name>
+			<Description>005056A2-27FA-A1EE-89AF-9FAF260301A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+			<Notes/>
+			<UIRef>Tblcdss</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54E981A0">
+					<DocumentID>005056A2-27FA-A1EE-89B0-339C54E941A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B0-339C54E941A0</Name>
+					<Description>005056A2-27FA-A1EE-89B0-339C54E941A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T05:53:42.069</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF260141A0">
+			<DocumentID>005056A2-27FA-A1EE-89AF-9FAF260101A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AF-9FAF260101A0</Name>
+			<Description>005056A2-27FA-A1EE-89AF-9FAF260101A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:53:42.069</CreationDate>
+			<Notes/>
+			<UIRef>tblcpaa</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54E801A0">
+					<DocumentID>005056A2-27FA-A1EE-89B0-339C54E7C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B0-339C54E7C1A0</Name>
+					<Description>005056A2-27FA-A1EE-89B0-339C54E7C1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF25FF41A0">
+			<DocumentID>005056A2-27FA-A1EE-89AF-9FAF25FF01A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AF-9FAF25FF01A0</Name>
+			<Description>005056A2-27FA-A1EE-89AF-9FAF25FF01A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+			<Notes/>
+			<UIRef>TbLnoll</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF25F5C1A0">
+					<DocumentID>005056A2-27FA-A1EE-89AF-9FAF25F581A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89AF-9FAF25F581A0</Name>
+					<Description>005056A2-27FA-A1EE-89AF-9FAF25F581A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T05:53:42.069</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF25FD41A0">
+			<DocumentID>005056A2-27FA-A1EE-89AF-9FAF25FD01A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89AF-9FAF25FD01A0</Name>
+			<Description>005056A2-27FA-A1EE-89AF-9FAF25FD01A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+			<Notes/>
+			<UIRef>TblCatCodee</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89AF-9FAF25F741A0">
+					<DocumentID>005056A2-27FA-A1EE-89AF-9FAF25F701A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89AF-9FAF25F701A0</Name>
+					<Description>005056A2-27FA-A1EE-89AF-9FAF25F701A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T05:53:42.064</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54E201A0">
+			<DocumentID>005056A2-27FA-A1EE-89B0-339C54E1C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B0-339C54E1C1A0</Name>
+			<Description>005056A2-27FA-A1EE-89B0-339C54E1C1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+			<Notes/>
+			<UIRef>tblHouseholddat</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3150781A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B3150741A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B3150741A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B3150741A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.151</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54E001A0">
+			<DocumentID>005056A2-27FA-A1EE-89B0-339C54DFC1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B0-339C54DFC1A0</Name>
+			<Description>005056A2-27FA-A1EE-89B0-339C54DFC1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.156</CreationDate>
+			<Notes/>
+			<UIRef>tblPolicyNumbe</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3151801A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B31517C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B31517C1A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B31517C1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54DE01A0">
+			<DocumentID>005056A2-27FA-A1EE-89B0-339C54DDC1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B0-339C54DDC1A0</Name>
+			<Description>005056A2-27FA-A1EE-89B0-339C54DDC1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.156</CreationDate>
+			<Notes/>
+			<UIRef>tblInteraction</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3150A81A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B3150A41A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B3150A41A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B3150A41A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.151</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54DC01A0">
+			<DocumentID>005056A2-27FA-A1EE-89B0-339C54DBC1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B0-339C54DBC1A0</Name>
+			<Description>005056A2-27FA-A1EE-89B0-339C54DBC1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+			<Notes/>
+			<UIRef>tblCaseHistor</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3150C01A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B3150BC1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B3150BC1A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B3150BC1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.156</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54DA01A0">
+			<DocumentID>005056A2-27FA-A1EE-89B0-339C54D9C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B0-339C54D9C1A0</Name>
+			<Description>005056A2-27FA-A1EE-89B0-339C54D9C1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+			<Notes/>
+			<UIRef>tblAddres</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3150F01A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B3150EC1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B3150EC1A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B3150EC1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54D801A0">
+			<DocumentID>005056A2-27FA-A1EE-89B0-339C54D7C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B0-339C54D7C1A0</Name>
+			<Description>005056A2-27FA-A1EE-89B0-339C54D7C1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.156</CreationDate>
+			<Notes/>
+			<UIRef>tblIssueStat</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3150D81A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B3150D41A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B3150D41A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B3150D41A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54D601A0">
+			<DocumentID>005056A2-27FA-A1EE-89B0-339C54D5C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B0-339C54D5C1A0</Name>
+			<Description>005056A2-27FA-A1EE-89B0-339C54D5C1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+			<Notes/>
+			<UIRef>tblCit</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3151081A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B3151041A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B3151041A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B3151041A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.156</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54D401A0">
+			<DocumentID>005056A2-27FA-A1EE-89B0-339C54D3C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B0-339C54D3C1A0</Name>
+			<Description>005056A2-27FA-A1EE-89B0-339C54D3C1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.151</CreationDate>
+			<Notes/>
+			<UIRef>tblStateCod</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3151201A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B31511C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B31511C1A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B31511C1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.151</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B0-339C54D201A0">
+			<DocumentID>005056A2-27FA-A1EE-89B0-339C54D1C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B0-339C54D1C1A0</Name>
+			<Description>005056A2-27FA-A1EE-89B0-339C54D1C1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+			<Notes/>
+			<UIRef>tblDO</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3151381A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B3151341A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B3151341A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B3151341A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.156</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3151A81A0">
+			<DocumentID>005056A2-27FA-A1EE-89B1-A4B3151A41A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B1-A4B3151A41A0</Name>
+			<Description>005056A2-27FA-A1EE-89B1-A4B3151A41A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+			<Notes/>
+			<UIRef>tblNam</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3151501A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B31514C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B31514C1A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B31514C1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.151</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3151881A0">
+			<DocumentID>005056A2-27FA-A1EE-89B1-A4B3151841A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89B1-A4B3151841A0</Name>
+			<Description>005056A2-27FA-A1EE-89B1-A4B3151841A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T06:35:29.151</CreationDate>
+			<Notes/>
+			<UIRef>tblPersonI</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89B1-A4B3151681A0">
+					<DocumentID>005056A2-27FA-A1EE-89B1-A4B3151641A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89B1-A4B3151641A0</Name>
+					<Description>005056A2-27FA-A1EE-89B1-A4B3151641A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T06:35:29.146</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89C5-F24BF50201A0">
+			<DocumentID>005056A2-27FA-A1EE-89C5-F24BF501C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89C5-F24BF501C1A0</Name>
+			<Description>005056A2-27FA-A1EE-89C5-F24BF501C1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T16:22:51.661</CreationDate>
+			<Notes/>
+			<UIRef>recordsCount</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89C7-5226DFBBC1A0">
+					<DocumentID>005056A2-27FA-A1EE-89C7-5226DFBB81A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89C7-5226DFBB81A0</Name>
+					<Description>005056A2-27FA-A1EE-89C7-5226DFBB81A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T16:52:44.003</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89C7-5226DFBC41A0">
+			<DocumentID>005056A2-27FA-A1EE-89C7-5226DFBC01A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89C7-5226DFBC01A0</Name>
+			<Description>005056A2-27FA-A1EE-89C7-5226DFBC01A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-20T16:52:44.003</CreationDate>
+			<Notes/>
+			<UIRef>claimcount</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-89C7-5226DFBCC1A0">
+					<DocumentID>005056A2-27FA-A1EE-89C7-5226DFBC81A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-89C7-5226DFBC81A0</Name>
+					<Description>005056A2-27FA-A1EE-89C7-5226DFBC81A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-07-20T16:52:44.003</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8A5B-2B4F6661C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8A5B-2B4F666181A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8A5B-2B4F666181A0</Name>
+			<Description>005056A2-27FA-A1EE-8A5B-2B4F666181A0</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-23T16:06:13.126</CreationDate>
+			<Notes/>
+			<UIRef>tblPolicyNumber</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8A5B-2B4F666241A0">
+					<DocumentID>005056A2-27FA-A1EE-8A5B-2B4F666201A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8A5B-2B4F666201A0</Name>
+					<Description>005056A2-27FA-A1EE-8A5B-2B4F666201A0</Description>
+					<CreatedBy>Raghu</CreatedBy>
+					<CreationDate>2023-07-23T16:06:13.126</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8A5B-2B4F6660C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8A5B-2B4F666081A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8A5B-2B4F666081A0</Name>
+			<Description>005056A2-27FA-A1EE-8A5B-2B4F666081A0</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-23T16:06:13.126</CreationDate>
+			<Notes/>
+			<UIRef>tblPersonId</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8A5B-2B4F666141A0">
+					<DocumentID>005056A2-27FA-A1EE-8A5B-2B4F666101A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8A5B-2B4F666101A0</Name>
+					<Description>005056A2-27FA-A1EE-8A5B-2B4F666101A0</Description>
+					<CreatedBy>Raghu</CreatedBy>
+					<CreationDate>2023-07-23T16:06:13.126</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B20-2C1C212181A0">
+			<DocumentID>005056A2-27FA-A1EE-8B20-2C1C212141A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B20-2C1C212141A0</Name>
+			<Description>005056A2-27FA-A1EE-8B20-2C1C212141A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblHouseholddata</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51DA01A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51D9C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51D9C1A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51D9C1A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.601</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B20-2C1C212081A0">
+			<DocumentID>005056A2-27FA-A1EE-8B20-2C1C212041A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B20-2C1C212041A0</Name>
+			<Description>005056A2-27FA-A1EE-8B20-2C1C212041A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblPolicyNumber</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB06641A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06601A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB06601A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB06601A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB06FC1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06F81A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB06F81A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB06F81A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblCaseHistory</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB05EC1A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB05E81A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB05E81A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB05E81A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T10:32:54.093</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB06EC1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06E81A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB06E81A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB06E81A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblInteractions</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51DC81A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51DC41A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51DC41A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51DC41A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB06DC1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06D81A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB06D81A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB06D81A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblIssueState</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB062C1A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06281A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB06281A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB06281A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T10:29:52.015</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB06CC1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06C81A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB06C81A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB06C81A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblAddress</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB06341A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06301A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB06301A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB06301A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB06AC1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06A81A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB06A81A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB06A81A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.015</CreationDate>
+			<Notes/>
+			<UIRef>tblCity</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB063C1A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06381A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB06381A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB06381A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB069C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06981A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB06981A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB06981A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblStateCode</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51DF01A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51DEC1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51DEC1A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51DEC1A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB068C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06881A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB06881A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB06881A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblDOB</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB064C1A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06481A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB06481A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB06481A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB067C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06781A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB06781A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB06781A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblName</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB06541A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06501A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB06501A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB06501A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB066C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06681A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB06681A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB06681A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+			<Notes/>
+			<UIRef>tblPersonId</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB065C1A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB06581A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB06581A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB06581A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T10:29:52.02</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB057C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB05781A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4B-FEEFB05781A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4B-FEEFB05781A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.601</CreationDate>
+			<Notes/>
+			<UIRef>tblHouseholddata</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB05841A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB05801A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB05801A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB05801A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51EB01A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51EAC1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51EAC1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51EAC1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+			<Notes/>
+			<UIRef>tblInteractions</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4B-FEEFB05741A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4B-FEEFB05701A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4B-FEEFB05701A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4B-FEEFB05701A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51EA01A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E9C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51E9C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51E9C1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+			<Notes/>
+			<UIRef>tblCaseHistory</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51DD01A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51DCC1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51DCC1A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51DCC1A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E901A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E8C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51E8C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51E8C1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+			<Notes/>
+			<UIRef>tblIssueState</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51DD81A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51DD41A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51DD41A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51DD41A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E801A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E7C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51E7C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51E7C1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+			<Notes/>
+			<UIRef>tblAddress</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51DE01A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51DDC1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51DDC1A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51DDC1A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E701A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E6C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51E6C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51E6C1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.611</CreationDate>
+			<Notes/>
+			<UIRef>tblCity</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51DE81A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51DE41A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51DE41A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51DE41A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E601A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E5C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51E5C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51E5C1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.611</CreationDate>
+			<Notes/>
+			<UIRef>tblStateCode</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51DF81A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51DF41A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51DF41A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51DF41A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E501A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E4C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51E4C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51E4C1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.601</CreationDate>
+			<Notes/>
+			<UIRef>tblDOB</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E001A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51DFC1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51DFC1A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51DFC1A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E401A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E3C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51E3C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51E3C1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+			<Notes/>
+			<UIRef>tblName</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E081A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E041A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51E041A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51E041A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.601</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E301A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E2C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51E2C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51E2C1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+			<Notes/>
+			<UIRef>tblPersonId</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E101A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E0C1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51E0C1A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51E0C1A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E201A0">
+			<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E1C1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8B4E-259C51E1C1A0</Name>
+			<Description>005056A2-27FA-A1EE-8B4E-259C51E1C1A0</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-07-28T11:27:10.611</CreationDate>
+			<Notes/>
+			<UIRef>tblPolicyNumber</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8B4E-259C51E181A0">
+					<DocumentID>005056A2-27FA-A1EE-8B4E-259C51E141A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8B4E-259C51E141A0</Name>
+					<Description>005056A2-27FA-A1EE-8B4E-259C51E141A0</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-07-28T11:27:10.606</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F47320C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8C14-27F4732081A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8C14-27F4732081A0</Name>
+			<Description>005056A2-27FA-A1EE-8C14-27F4732081A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-01T11:14:47.708</CreationDate>
+			<Notes/>
+			<UIRef></UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F4732141A0">
+					<DocumentID>005056A2-27FA-A1EE-8C14-27F4732101A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8C14-27F4732101A0</Name>
+					<Description>005056A2-27FA-A1EE-8C14-27F4732101A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-08-01T11:14:47.708</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F4731EC1A0">
+			<DocumentID>005056A2-27FA-A1EE-8C14-27F4731E81A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8C14-27F4731E81A0</Name>
+			<Description>005056A2-27FA-A1EE-8C14-27F4731E81A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-01T11:14:47.713</CreationDate>
+			<Notes/>
+			<UIRef>button2</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F4731F41A0">
+					<DocumentID>005056A2-27FA-A1EE-8C14-27F4731F01A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8C14-27F4731F01A0</Name>
+					<Description>005056A2-27FA-A1EE-8C14-27F4731F01A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-08-01T11:14:47.713</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F4731DC1A0">
+			<DocumentID>005056A2-27FA-A1EE-8C14-27F4731D81A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8C14-27F4731D81A0</Name>
+			<Description>005056A2-27FA-A1EE-8C14-27F4731D81A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-01T11:14:47.713</CreationDate>
+			<Notes/>
+			<UIRef>button2</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F4731E41A0">
+					<DocumentID>005056A2-27FA-A1EE-8C14-27F4731E01A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8C14-27F4731E01A0</Name>
+					<Description>005056A2-27FA-A1EE-8C14-27F4731E01A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-08-01T11:14:47.708</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F4731AC1A0">
+			<DocumentID>005056A2-27FA-A1EE-8C14-27F4731A81A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8C14-27F4731A81A0</Name>
+			<Description>005056A2-27FA-A1EE-8C14-27F4731A81A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-01T11:14:47.713</CreationDate>
+			<Notes/>
+			<UIRef>button4</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F4731B41A0">
+					<DocumentID>005056A2-27FA-A1EE-8C14-27F4731B01A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8C14-27F4731B01A0</Name>
+					<Description>005056A2-27FA-A1EE-8C14-27F4731B01A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-08-01T11:14:47.713</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F47319C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8C14-27F4731981A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8C14-27F4731981A0</Name>
+			<Description>005056A2-27FA-A1EE-8C14-27F4731981A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-01T11:14:47.713</CreationDate>
+			<Notes/>
+			<UIRef>button2</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8C14-27F4731A41A0">
+					<DocumentID>005056A2-27FA-A1EE-8C14-27F4731A01A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8C14-27F4731A01A0</Name>
+					<Description>005056A2-27FA-A1EE-8C14-27F4731A01A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-08-01T11:14:47.708</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8987-67EBC40341A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices>
+		<uri
+			id="005056A2-27FA-A1EE-89ED-4DF87008C1A0"
+		/>
+		<uri
+			id="005056A2-27FA-A1EE-8A82-05F94AB841A0"
+		/>
+		<uri
+			id="005056A2-27FA-A1EE-8A83-3ABD148181A0"
+		/>
+		<uri
+			id="005056A2-27FA-A1EE-8A8A-9A0F7C42C1A0"
+		/>
+	</Webservices>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8987-67EBC3FE41A0">
+			<DocumentID>005056A2-27FA-A1EE-8987-67EBC3FE01A0</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-19T10:33:15.037</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89ED-4D8F409B01A0">
+			<DocumentID>005056A2-27FA-A1EE-89ED-4D8F409AC1A0</DocumentID>
+			<Name>MDMPolicySearchModel</Name>
+			<Description>MDMPolicySearchModel</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-21T11:19:18.724</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/default</namespace>
+			<operationName>PFP_MDMPolicySearch</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8A82-60154CAA81A0">
+			<DocumentID>005056A2-27FA-A1EE-8A82-60154CAA41A0</DocumentID>
+			<Name>GetXMLObjectOperationModel</Name>
+			<Description>GetXMLObjectOperationModel</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-24T10:06:52.462</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xmlstore</namespace>
+			<operationName>GetXMLObject</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8A82-E7BF748E01A0">
+			<DocumentID>005056A2-27FA-A1EE-8A82-E7BF748DC1A0</DocumentID>
+			<Name>GetOrganizationInfoModel</Name>
+			<Description>GetOrganizationInfoModel</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-24T10:35:54.267</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/notification</namespace>
+			<operationName>GetOrganizationInfo</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8AAC-1820B7AC01A0">
+			<DocumentID>005056A2-27FA-A1EE-8AAC-1820B7ABC1A0</DocumentID>
+			<Name>getDropDownValues</Name>
+			<Description>getDropDownValues</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-25T06:11:23.072</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/PFPWSAppServerPackage</namespace>
+			<operationName>GetDropdownValuesByType</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8AB6-5A85B380C1A0">
+			<DocumentID>005056A2-27FA-A1EE-8ABA-D973742CC1A0</DocumentID>
+			<Name>GetClaimHistoryModel</Name>
+			<Description>GetClaimHistoryModel</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-25T13:01:44.118</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName></operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

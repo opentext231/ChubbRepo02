@@ -1,0 +1,832 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8E0D-341CC9C901A1">
+	<DocumentID>005056A2-27FA-A1EE-8E0D-341CC9C8C1A1</DocumentID>
+	<Name>PFP_RejectTask</Name>
+	<Description>PFP_RejectTask</Description>
+	<CreatedBy>manishas</CreatedBy>
+	<CreationDate>2023-08-11T11:47:13.695</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead>
+				<style
+					src="Css/PFP_bootstrap1.min.css"
+					documentID="005056A2-27FA-A1EE-82E6-D5BC5DB4019E"
+				/>
+				<style
+					src="Css/PFP_CaseTask.css"
+					documentID="005056A2-27FA-A1EE-8300-7F460253019E"
+				/>
+				<xforms:model
+					id="UpdateReviewActionSummaryModel"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="false"
+					wcpforms:businessElement="tns:PFP_ReviewActionSummary"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+							src="http://schemas.cordys.com/PFPWSAppServerPackage/UpdatePFP_ReviewActionSummary"
+							type="get"
+							operationName="UpdatePFP_ReviewActionSummary"
+							wcpforms:wsguid="005056A2-27FA-A1EE-8601-AB09B438C19F">
+							<tuple
+								xmlns="http://schemas.cordys.com/PFPWSAppServerPackage"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/PFPWSAppServerPackage</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/PFPWSAppServerPackage</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+				</xforms:model>
+				<xforms:model
+					id="OutbounddynamicNotesModel"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="false"
+					wcpforms:businessElement="tns:APIResult"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false"
+					wcpforms:nontransactional="true">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+							src="http://schemas.cordys.com/default/PFP_CRM_NotesOutBound"
+							type="get"
+							operationName="PFP_CRM_NotesOutBound"
+							wcpforms:wsguid="005056A2-27FA-A1EE-8FDA-4439FBE8C1A4">
+							<BusinessUnit
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<CreatedOn
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<ExternalId
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<Description
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<CreatedBy
+								xmlns="http://schemas.cordys.com/default"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<xforms:action
+						ev:event="xforms-onrequest">
+						<xforms:OutbounddynamicNotesModel_OnRequest/>
+					</xforms:action>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/default</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/default</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+				</xforms:model>
+				<xforms:model
+					id="NotesModel"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="false"
+					wcpforms:businessElement="tns:PFP_NotesDetails"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+							src="http://schemas.cordys.com/PFPWSAppServerPackage/UpdatePFP_NotesDetails"
+							type="get"
+							operationName="UpdatePFP_NotesDetails"
+							wcpforms:wsguid="005056A2-27FA-A1EE-82D9-8B747230819E">
+							<tuple
+								xmlns="http://schemas.cordys.com/PFPWSAppServerPackage"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/PFPWSAppServerPackage</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/PFPWSAppServerPackage</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+				</xforms:model>
+				<xforms:model
+					id="RejectTaskDynamicsOutboundModel"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="false"
+					wcpforms:businessElement="tns:Status"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false"
+					wcpforms:nontransactional="true">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+							src="http://schemas.cordys.com/default/PFP_CRM_RejectOutBound"
+							type="get"
+							operationName="PFP_CRM_RejectOutBound"
+							wcpforms:wsguid="005056A2-27FA-A1EE-8FDA-AF7ADD3401A4">
+							<bussinessUnitCode
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<CaseID
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<CaseTitle
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<ClaimNumber
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<CreatedBy
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<CreatedOn
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<CustomerId
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<DestinationSystem
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<Department
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<PolicyNumber
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<Worklist
+								xmlns="http://schemas.cordys.com/default"
+							/>
+							<CaseDescription
+								xmlns="http://schemas.cordys.com/default"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/default</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/default</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+					<xforms:action
+						ev:event="xforms-onrequest">
+						<xforms:RejectTaskDynamicsOutboundModel_OnRequest/>
+					</xforms:action>
+				</xforms:model>
+				<xforms:model
+					id="GetPFPManualTaskDetailsModel"
+					wcpforms:gateway="com.eibus.web.soap.Gateway.wcp"
+					wcpforms:automatic="false"
+					wcpforms:businessElement="tns:PFP_ManualTaskDetails"
+					singleTransaction="false"
+					promptToSave="false"
+					isConstraintValidation="false"
+					isInitializationRequired="false"
+					isApplyAccessControl="false">
+					<xforms:instance
+						xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+						wcpforms:timeout=""
+						wcpforms:iteratorSize="50">
+						<wcpforms:dataset
+							xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+							src="http://schemas.cordys.com/PFPWSAppServerPackage/GetManualTaskDetailsOfCaseID"
+							type="get"
+							operationName="GetManualTaskDetailsOfCaseID"
+							wcpforms:wsguid="005056A2-27FA-A1EE-8B1D-02AA5C68C1A0">
+							<CaseID
+								xmlns="http://schemas.cordys.com/PFPWSAppServerPackage"
+							/>
+						</wcpforms:dataset>
+					</xforms:instance>
+					<wcpforms:instanceschema/>
+					<wcpforms:xpathmetainfo
+						xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms">
+						<wcpforms:namespace
+							prefix="xmlns">http://schemas.cordys.com/PFPWSAppServerPackage</wcpforms:namespace>
+						<wcpforms:namespace
+							prefix="tns">http://schemas.cordys.com/PFPWSAppServerPackage</wcpforms:namespace>
+					</wcpforms:xpathmetainfo>
+				</xforms:model>
+				<xml
+					xmlns="">
+					<xml
+						xmlns=""
+						id="NotesUpdate">
+						<SOAP:Envelope
+							xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+							<SOAP:Body>
+								<UpdatePFP_NotesDetails
+									xmlns="http://schemas.cordys.com/PFPWSAppServerPackage"
+									reply="yes"
+									commandUpdate="no"
+									preserveSpace="no"
+									batchUpdate="no">
+									<tuple>
+										<new>
+											<PFP_NotesDetails
+												qAccess="0"
+												qConstraint="0"
+												qInit="0"
+												qValues="">
+												<SNO/>
+												<PolicyNumber/>
+												<CaseID/>
+												<CaseTitle/>
+												<CreationDate/>
+												<LoggedBy/>
+												<Notes/>
+												<TaskInstanceID/>
+											</PFP_NotesDetails>
+										</new>
+									</tuple>
+								</UpdatePFP_NotesDetails>
+							</SOAP:Body>
+						</SOAP:Envelope>
+					</xml>
+					<xml
+						xmlns=""
+						id="ActivityUpdate">
+						<SOAP:Envelope
+							xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+							<SOAP:Body>
+								<UpdatePFP_ReviewActionSummary
+									xmlns="http://schemas.cordys.com/PFPWSAppServerPackage"
+									reply="yes"
+									commandUpdate="no"
+									preserveSpace="no"
+									batchUpdate="no">
+									<tuple>
+										<new>
+											<PFP_ReviewActionSummary
+												qAccess="0"
+												qConstraint="0"
+												qInit="0"
+												qValues="">
+												<ActId/>
+												<ActionType/>
+												<Description/>
+												<ActionBy/>
+												<ActionDate/>
+												<PolicyNbr/>
+												<CaseNbr/>
+												<CaseInstId/>
+												<TaskId/>
+												<ScreenType/>
+												<WorkItem/>
+												<OldDescription/>
+											</PFP_ReviewActionSummary>
+										</new>
+									</tuple>
+								</UpdatePFP_ReviewActionSummary>
+							</SOAP:Body>
+						</SOAP:Envelope>
+					</xml>
+				</xml>
+			</xhead>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop"
+					wcpforms:customclass="primary-header create-task">
+					<xforms:textarea
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsTextarea"
+						id="RejectNotes"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 116px"
+						wcpforms:customclass="InputBorder2">
+						<xforms:label
+							textIdentifier="005056A2-27FA-A1EE-8827-0816A63D419F"
+							wcpforms:class="v_label">Notes</xforms:label>
+					</xforms:textarea>
+					<xforms:group
+						appearance="controlbox"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+						id="controlbox1"
+						controltype="button"
+						wcpforms:layout="horizontal"
+						wcpforms:class="v_layout autoextent"
+						wcpforms:align="left_align"
+						wcpforms:size="null auto">
+						<xforms:trigger
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+							id="SubmitBtn"
+							wcpforms:class="h_button"
+							wcpforms:size="null 22.01px">
+							<xforms:label
+								textIdentifier="005056A2-27FA-A1EE-8E0D-341CC9C241A1">Submit</xforms:label>
+							<xforms:action
+								ev:event="xforms-activate">
+								<xforms:SubmitBtn_Click/>
+							</xforms:action>
+						</xforms:trigger>
+						<xforms:trigger
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+							id="CancelBtn"
+							wcpforms:class="h_button"
+							wcpforms:size="null 22.01px">
+							<xforms:label
+								textIdentifier="005056A2-27FA-A1EE-89B2-743CAA72C1A0">Cancel</xforms:label>
+							<xforms:action
+								ev:event="xforms-activate">
+								<xforms:CancelBtn_Click/>
+							</xforms:action>
+						</xforms:trigger>
+					</xforms:group>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[var PolicyNo, userForNotes, caseID, taskID,Flag='',CompanyCode,CaseTitle,CustomerID,date,TaskType,outputDate  ;
+
+
+function Form_InitDone(eventObject)
+{
+    PolicyNo=application.event.data.policynum;  
+  userForNotes=application.event.data.userDetails;
+  caseID=application.event.data.caseId;
+  taskID=application.event.data.taskidentifier;
+  CompanyCode=application.event.data.companyCode;
+  CaseTitle=application.event.data.CaseTitle;
+  CustomerID=application.event.data.CustomerID;
+   date=application.event.data.Date;
+   
+   var parts = date.split('-');
+outputDate = `${parts[1]}/${parts[2]}/${parts[0]}`;
+
+var methodReq=GetPFPManualTaskDetailsModel.getMethodRequest();  
+     cordys.setNodeText(methodReq,".//*[local-name()='CaseID']",caseID); 
+     GetPFPManualTaskDetailsModel.setMethodRequest(methodReq);
+     GetPFPManualTaskDetailsModel.reset();
+	 
+	 
+	 var actionTuples=cordys.selectXMLNodes(GetPFPManualTaskDetailsModel.getData(),".//*[local-name()='PFP_ManualTaskDetails']"); 
+	 
+	 TaskType = cordys.getNodeText(actionTuples[0], ".//*[local-name()='TaskType']");
+}
+
+
+function SubmitBtn_Click(eventObject)
+{
+    if(validate('Save'))
+    {
+	application.confirm("This action will complete this task as Obsolete and notify the Contact Center for review. Do you wish to continue?", false, conformfun, false, "Reject Task");
+	}
+}
+
+function CancelBtn_Click(eventObject)
+{
+    Flag=false;
+ application.container.close();
+}
+
+function validate(Type)
+{
+	if(RejectNotes.getValue().length ==0)
+	{
+	application.notify("Mandatory selection: Notes entry required");
+	return false;
+	}
+	return true ;
+}
+function dialogReturnValue()
+    {
+    var data = new Object();
+      
+		data.Status=Flag;
+		
+                return data;
+    }
+    
+    function conformfun(confirmReturnValue)
+{
+
+    if (confirmReturnValue == 1)
+    {
+		
+		
+       Flag=true;
+		   
+        var request = cordys.cloneXMLDocument(NotesUpdate.XMLDocument);
+         cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_NotesDetails']/*[local-name()='PolicyNumber']",PolicyNo);
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_NotesDetails']/*[local-name()='CaseID']",caseID);
+cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_NotesDetails']/*[local-name()='CaseTitle']","PFP Service- Reject");
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_NotesDetails']/*[local-name()='CreationDate']",getCurrentDateandTime());
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_NotesDetails']/*[local-name()='LoggedBy']",userForNotes);
+         cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_NotesDetails']/*[local-name()='Notes']",RejectNotes.getValue());
+         cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_NotesDetails']/*[local-name()='TaskInstanceID']",taskID);
+        NotesModel.setMethodRequest(request);
+        NotesModel.reset();
+ 
+ 
+ var request = cordys.cloneXMLDocument(ActivityUpdate.XMLDocument);
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='ActionType']",'Note (Claims Case = Claim Note)');
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='Description']",RejectNotes.getValue());
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='ActionDate']",getCurrentDateandTime());
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='ActionBy']",userForNotes);
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='TaskId']",taskID);
+         cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='WorkItem']",'PFP Service');
+          cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='OldDescription']");
+         
+        UpdateReviewActionSummaryModel.setMethodRequest(request);
+        UpdateReviewActionSummaryModel.reset();
+        
+        var request = cordys.cloneXMLDocument(ActivityUpdate.XMLDocument);
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='ActionType']",'Status Change');
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='Description']",'Obsolete');
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='ActionBy']",userForNotes);
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='ActionDate']",getCurrentDateandTime());
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='PolicyNbr']",PolicyNo);
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='CaseNbr']",caseID);
+        cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='TaskId']",taskID);
+         cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='WorkItem']",'PFP Service');
+          cordys.setNodeText(request,".//*[local-name()='new']/*[local-name()='PFP_ReviewActionSummary']/*[local-name()='OldDescription']",'Active');
+         
+        UpdateReviewActionSummaryModel.setMethodRequest(request);
+        UpdateReviewActionSummaryModel.reset();
+         
+         
+         
+     RejectTaskDynamicsOutboundModel.reset();
+	 
+     OutbounddynamicNotesModel.reset();
+	         
+     
+       alert('Notification completed successfully');
+        
+       application.container.close(); 
+     	 
+   
+    }//end of if confirmReturnValue
+ 
+}
+
+
+function getCurrentDateandTime()
+{
+    var currentDate = new Date();
+    var day = currentDate.getDate();
+    if(day.toString().length==1)
+    {
+        day="0" + day;
+    }
+    var month = currentDate.getMonth() + 1;
+    if(month.toString().length==1)
+    {
+        month="0" + month;
+    }
+    var year = currentDate.getFullYear();
+    var date =  year+  '-' + month + '-' + day;
+    return date = date + "T" +
+                           currentDate.getHours() + ":" +
+                           currentDate.getMinutes() + ":" +
+                           currentDate.getSeconds();
+ }
+
+function OutbounddynamicNotesModel_OnRequest(eventObject)
+{
+    cordys.setNodeText(eventObject.request,".//*[local-name()='BusinessUnit']",CompanyCode); 
+	 //cordys.setNodeText(eventObject.request,".//*[local-name()='CreatedOn']",outputDate);
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='ExternalId']",caseID);
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='Description']",RejectNotes.getValue());
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='CreatedBy']",userForNotes); 
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='PolicyNumber']",PolicyNo);
+	  cordys.setNodeText(eventObject.request,".//*[local-name()='CustomerId']",CustomerID);
+
+}
+function RejectTaskDynamicsOutboundModel_OnRequest(eventObject)
+{
+   cordys.setNodeText(eventObject.request,".//*[local-name()='bussinessUnitCode']",CompanyCode);
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='CaseID']",caseID); 
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='CaseTitle']",CaseTitle); 
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='ClaimNumber']",'');
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='CreatedBy']",userForNotes);
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='CreatedOn']",outputDate );
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='CustomerId']",CustomerID);
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='DestinationSystem']",'MS-MDM');
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='Department']",'PFP'); 
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='PolicyNumber']",PolicyNo);
+	 //cordys.setNodeText(eventObject.request,".//*[local-name()='Worklist']",TaskType ); 
+	  cordys.setNodeText(eventObject.request,".//*[local-name()='Worklist']",CaseTitle ); 
+	 cordys.setNodeText(eventObject.request,".//*[local-name()='CaseDescription']",'WS/PFP'); 
+}
+]]>
+			</xformsscript>
+			<xforms:action
+				ev:event="xforms-initialize-done">
+				<xforms:Form_InitDone/>
+			</xforms:action>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>PFP_RejectTask</taskDescription>
+	<taskName>PFP_RejectTask</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts/>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets>
+		<uri
+			id="005056B1-D319-A1EE-A4D4-CA9D95FC8E88"
+			path="PFP/Web/Css/PFP_bootstrap1.min.css"
+			type="com.cordys.cws.documenttypes.css.Css"
+		/>
+		<uri
+			id="005056B1-D319-A1EE-A4D4-CA9D95F88E88"
+			path="PFP/Web/Css/PFP_CaseTask.css"
+			type="com.cordys.cws.documenttypes.css.Css"
+		/>
+	</StyleSheets>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8E10-3961155581A1">
+			<DocumentID>005056A2-27FA-A1EE-8E10-3961155541A1</DocumentID>
+			<Name>005056A2-27FA-A1EE-8E10-3961155541A1</Name>
+			<Description>005056A2-27FA-A1EE-8E10-3961155541A1</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-08-11T12:39:58.536</CreationDate>
+			<Notes/>
+			<DeveloperText></DeveloperText>
+			<Identifier/>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8E0D-341CC9C781A1">
+			<DocumentID>005056A2-27FA-A1EE-8E0D-341CC9C741A1</DocumentID>
+			<Name>005056A2-27FA-A1EE-8E0D-341CC9C741A1</Name>
+			<Description>005056A2-27FA-A1EE-8E0D-341CC9C741A1</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-08-11T11:47:13.695</CreationDate>
+			<Notes/>
+			<UIRef>RejectNotes</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8E0D-341CC9C701A1">
+					<DocumentID>005056A2-27FA-A1EE-8E0D-341CC9C6C1A1</DocumentID>
+					<Name>005056A2-27FA-A1EE-8E0D-341CC9C6C1A1</Name>
+					<Description>005056A2-27FA-A1EE-8E0D-341CC9C6C1A1</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-08-11T11:47:13.695</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8E0D-341CC9C8C1A1"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8E0D-341CC9C501A1">
+			<DocumentID>005056A2-27FA-A1EE-8E0D-341CC9C4C1A1</DocumentID>
+			<Name>005056A2-27FA-A1EE-8E0D-341CC9C4C1A1</Name>
+			<Description>005056A2-27FA-A1EE-8E0D-341CC9C4C1A1</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-08-11T11:49:07.251</CreationDate>
+			<Notes/>
+			<UIRef>CancelBtn</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8E0D-341CC9C181A1">
+					<DocumentID>005056A2-27FA-A1EE-8E0D-341CC9C141A1</DocumentID>
+					<Name>005056A2-27FA-A1EE-8E0D-341CC9C141A1</Name>
+					<Description>005056A2-27FA-A1EE-8E0D-341CC9C141A1</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-08-11T11:49:07.251</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8E0D-341CC9C8C1A1"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8E0D-341CC9C401A1">
+			<DocumentID>005056A2-27FA-A1EE-8E0D-341CC9C3C1A1</DocumentID>
+			<Name>005056A2-27FA-A1EE-8E0D-341CC9C3C1A1</Name>
+			<Description>005056A2-27FA-A1EE-8E0D-341CC9C3C1A1</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-08-11T11:49:07.251</CreationDate>
+			<Notes/>
+			<UIRef>SubmitBtn</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8E0D-341CC9C201A1">
+					<DocumentID>005056A2-27FA-A1EE-8E0D-341CC9C1C1A1</DocumentID>
+					<Name>005056A2-27FA-A1EE-8E0D-341CC9C1C1A1</Name>
+					<Description>005056A2-27FA-A1EE-8E0D-341CC9C1C1A1</Description>
+					<CreatedBy>manishas</CreatedBy>
+					<CreationDate>2023-08-11T11:49:07.256</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8E0D-341CC9C8C1A1"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices>
+		<uri
+			id="005056A2-27FA-A1EE-82D9-8B747230819E"
+		/>
+		<uri
+			id="005056A2-27FA-A1EE-8601-AB09B438C19F"
+		/>
+		<uri
+			id="005056A2-27FA-A1EE-8B1D-02AA5C68C1A0"
+		/>
+		<uri
+			id="005056A2-27FA-A1EE-8FDA-4439FBE8C1A4"
+		/>
+		<uri
+			id="005056A2-27FA-A1EE-8FDA-AF7ADD3401A4"
+		/>
+	</Webservices>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8E0D-341CC9C681A1">
+			<DocumentID>005056A2-27FA-A1EE-8E0D-341CC9C641A1</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>manishas</CreatedBy>
+			<CreationDate>2023-08-11T11:47:13.695</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8ED3-D8D869A781A4">
+			<DocumentID>005056A2-27FA-A1EE-8ED3-D8D869A741A4</DocumentID>
+			<Name>UpdateReviewActionSummaryModel</Name>
+			<Description>UpdateReviewActionSummaryModel</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-15T10:11:07.149</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/PFPWSAppServerPackage</namespace>
+			<operationName>UpdatePFP_ReviewActionSummary</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8ED3-D8D869A701A4">
+			<DocumentID>005056A2-27FA-A1EE-8ED3-D8D869A6C1A4</DocumentID>
+			<Name>NotesModel</Name>
+			<Description>NotesModel</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-15T10:11:07.144</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/PFPWSAppServerPackage</namespace>
+			<operationName>UpdatePFP_NotesDetails</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8EDB-F141365281A4">
+			<DocumentID>005056A2-27FA-A1EE-8EDB-F141365241A4</DocumentID>
+			<Name>GetPFPManualTaskDetailsModel</Name>
+			<Description>GetPFPManualTaskDetailsModel</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-15T13:58:09.187</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/PFPWSAppServerPackage</namespace>
+			<operationName>GetManualTaskDetailsOfCaseID</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8FDA-443229FBC1A4">
+			<DocumentID>005056A2-27FA-A1EE-8FDA-443229FB81A4</DocumentID>
+			<Name>OutbounddynamicNotesModel</Name>
+			<Description>OutbounddynamicNotesModel</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-20T14:57:26.766</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/default</namespace>
+			<operationName>PFP_CRM_NotesOutBound</operationName>
+		</MessagePart>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8FDA-443229ED01A4">
+			<DocumentID>005056A2-27FA-A1EE-8FDA-443229ECC1A4</DocumentID>
+			<Name>RejectTaskDynamicsOutboundModel</Name>
+			<Description>RejectTaskDynamicsOutboundModel</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-20T15:06:40.0</CreationDate>
+			<Notes/>
+			<isRefExists>true</isRefExists>
+			<namespace>http://schemas.cordys.com/default</namespace>
+			<operationName>PFP_CRM_RejectOutBound</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

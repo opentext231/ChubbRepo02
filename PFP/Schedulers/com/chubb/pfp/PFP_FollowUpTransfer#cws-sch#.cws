@@ -1,0 +1,63 @@
+
+<Schedule
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.scheduler.Schedule"
+	typeVersion="002346V0-0008-71DF-DFF5-1F210914E83B"
+	RuntimeDocumentID="005056A2-27FA-A1EE-87BB-7EB1B380819F">
+	<DocumentID>005056A2-27FA-A1EE-87BB-7EB1B380419F</DocumentID>
+	<Name>PFP_FollowUpTransfer</Name>
+	<Description>PFP_FollowUpTransfer</Description>
+	<CreatedBy>Raghu</CreatedBy>
+	<CreationDate>2023-07-10T07:02:46.413</CreationDate>
+	<Notes/>
+	<Count>-1</Count>
+	<ScheduleType>Daily</ScheduleType>
+	<ScheduleXML>
+		<schedule
+			xmlns="http://schemas.cordys.com/scheduler/1.0"
+			name="PFP_FollowUpTransfer"
+			count="-1"
+			autodeploy="false"
+			targetLastModified="2023-07-10T06:37:24.879"
+			msgHolderLastModified="2023-07-05T11:00:02.572">
+			<datetime>
+				<daily>
+					<time>0:0</time>
+				</daily>
+			</datetime>
+			<parameters
+				xmlns="http://schemas.cordys.com/scheduler/1.0">
+				<ExecuteProcess
+					xmlns="http://schemas.cordys.com/bpm/execution/1.0">
+					<type>definition</type>
+					<receiver>true</receiver>
+					<source>Scheduler Engine</source>
+					<modelSpace/>
+					<message>
+						<Message
+							xmlns="">No Message</Message>
+					</message>
+				</ExecuteProcess>
+			</parameters>
+		</schedule>
+	</ScheduleXML>
+	<TargetType>bpm</TargetType>
+	<ExternalAction>
+		<BPMExternalAction
+			type="com.cordys.bpm.BPMExternalAction"
+			RuntimeDocumentID="005056A2-27FA-A1EE-87BB-7EB1B37EC19F">
+			<DocumentID>005056A2-27FA-A1EE-87BB-7EB1B37E819F</DocumentID>
+			<Name>005056A2-27FA-A1EE-87BB-7EB1B37E819F</Name>
+			<Description>005056A2-27FA-A1EE-87BB-7EB1B37E819F</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-10T07:02:46.413</CreationDate>
+			<Notes/>
+			<ContainedProcess>
+				<uri
+					id="005056A2-27FA-A1EE-86BB-16430299C19F"
+				/>
+			</ContainedProcess>
+		</BPMExternalAction>
+	</ExternalAction>
+	<WebserviceBindingOperation/>
+</Schedule>

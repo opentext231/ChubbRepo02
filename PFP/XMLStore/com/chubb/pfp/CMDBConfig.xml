@@ -1,0 +1,74 @@
+<xml xmlns="http://schemas.cordys.com/1.0/xmlstore">
+  <CMDBConfig id="WIMS_UW">
+    <database>ICMNLSDB</database>
+    <userid>ICMADMIN</userid>
+    <password>CKZnMD7j</password>
+    <sqldatabase>jdbc:sqlserver://nausd-wsql0445\\sql16a:1433;DatabaseName=SOP</sqldatabase>
+    <sqluser>captiva</sqluser>
+    <sqlpassword>captiva</sqlpassword>
+    <cm8docid />
+    <targetindexclass />
+    <keyvalue1 />
+    <keyvalue2 />
+    <keyvalue3 />
+    <keyvalue4 />
+    <keyvalue5 />
+    <keyvalue6 />
+    <keyvalue7 />
+    <keyvalue8 />
+  </CMDBConfig>
+   <CMDBConfig id="UW_New_SIT">
+    <database>ICMNLSDB</database>
+    <userid>ICMADMIN</userid>
+    <password>CKZnMD7j</password>
+    <sqldatabase>jdbc:sqlserver://nausd-wsql0445\\sql16a:1433;DatabaseName=SOP</sqldatabase>
+    <sqluser>captiva</sqluser>
+    <sqlpassword>captiva</sqlpassword>
+    <cm8docid />
+    <targetindexclass />
+    <keyvalue1 />
+    <keyvalue2 />
+    <keyvalue3 />
+    <keyvalue4 />
+    <keyvalue5 />
+    <keyvalue6 />
+    <keyvalue7 />
+    <keyvalue8 />
+  </CMDBConfig>
+<CMDBConfig id="uw_test">
+    <database>ICMNLSDB</database>
+    <userid>ICMADMIN</userid>
+    <password>CKZnMD7j</password>
+    <sqldatabase>jdbc:sqlserver://nausd-wsql0445\\sql16a:1433;DatabaseName=SOP</sqldatabase>
+    <sqluser>captiva</sqluser>
+    <sqlpassword>captiva</sqlpassword>
+    <cm8docid />
+    <targetindexclass />
+    <keyvalue1 />
+    <keyvalue2 />
+    <keyvalue3 />
+    <keyvalue4 />
+    <keyvalue5 />
+    <keyvalue6 />
+    <keyvalue7 />
+    <keyvalue8 />
+  </CMDBConfig>
+<CMDBConfig id="uw_dev">
+    <database>ICMNLSDB</database>
+    <userid>ICMADMIN</userid>
+    <password>CKZnMD7j</password>
+    <sqldatabase>jdbc:sqlserver://nausd-wsql0445\\sql16a:1433;DatabaseName=SOP</sqldatabase>
+    <sqluser>captiva</sqluser>
+    <sqlpassword>captiva</sqlpassword>
+    <cm8docid />
+    <targetindexclass />
+    <keyvalue1 />
+    <keyvalue2 />
+    <keyvalue3 />
+    <keyvalue4 />
+    <keyvalue5 />
+    <keyvalue6 />
+    <keyvalue7 />
+    <keyvalue8 />
+  </CMDBConfig>
+</xml>

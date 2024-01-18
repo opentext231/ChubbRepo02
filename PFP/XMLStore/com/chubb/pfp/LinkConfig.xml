@@ -1,0 +1,167 @@
+<links xmlns="http://schemas.cordys.com/1.0/xmlstore">
+  <link id="uw_dev">
+    <PccpuLink>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0112&amp;serviceCenter=01&amp;policyNumber=</baseUrl>
+    </PccpuLink>
+    <ccpuLink>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?serviceCenter=21&amp;claimNumber=</baseUrl>
+    </ccpuLink>
+    <ccpuLinkCanada>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?serviceCenter=22&amp;claimNumber=</baseUrl>
+    </ccpuLinkCanada>
+    <cccpuLinkworksite>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?serviceCenter=01&amp;claimNumber=</baseUrl>
+    </cccpuLinkworksite>
+    <PccpuLinkCanada>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0112&amp;serviceCenter=22&amp;policyNumber=</baseUrl>
+    </PccpuLinkCanada>
+    <PccpuLinkWorksite>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0885&amp;serviceCenter=01&amp;policyNumber=</baseUrl>
+    </PccpuLinkWorksite>
+<PccpuLinkNewYork>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0885&amp;serviceCenter=03&amp;policyNumber=</baseUrl>
+    </PccpuLinkNewYork>
+    <grpscndateLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H10B94617I0021018%20A21H10B94617I002101%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22GRPNUMBR%22%2C%22value%22:%22G%22} %2C{%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22} %2C{%22property%22:%22POLICY%22%2C%22value%22:%22TP%22}]&amp;autoRunSearch=true</grpscndateLink>
+    <mgrLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B90159D0000718%20A21H02B90159D000071%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22MNGRCODE%22%2C%22value%22:%22M%22} %2C{%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22}]&amp;autoRunSearch=true</mgrLink>
+    <grpLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B92927B0000818%20A21H02B92927B000081%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22GRPNUMBR%22%2C%22value%22:%22G%22}%2C {%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22}]&amp;autoRunSearch=true</grpLink>
+    <CanadaVendor>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B93543A0000918%20A21H02B93543A000091%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22C%22} ]&amp;autoRunSearch=true</CanadaVendor>
+    <tempDocLink>
+      <baseUrl>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=ICMNLSDB&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A20I28A70318F0000118%20A20I28A70318F000011%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22</baseUrl>
+      <baseUrlPolicy>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A23B09A42120B0011918%20A23B09A42120B001191%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{"property":"POLICY"%2C"value":%22</baseUrlPolicy>
+      <baseUrlPolicybkup>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A23H01A34956I0007718%20A23H01A34956I000771%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[%7B%22property%22:%22POLICY%22,%22value%22:%22</baseUrlPolicybkup>
+      <baseurlbkup>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A21H16A71135H0013718%20A21H16A71135H001371%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[%7B%22property%22:%22itemID%22,%22value%22:%22</baseurlbkup>
+      <searchparam />
+    </tempDocLink>
+    <CMLink>
+      <baseUrl>http://nausd-lapp0073.chubb.com:9081/navigator/</baseUrl>
+    </CMLink>
+    <searchProp>
+      <Predefinedsearch>
+        <predefinedURL>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A22G11A21217J8976518%20A22G11A21217J897651%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22</predefinedURL>
+      </Predefinedsearch>
+    </searchProp>
+  </link>
+  <link id="UW_New_SIT">
+    <PccpuLink>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0112&amp;serviceCenter=01&amp;policyNumber=</baseUrl>
+    </PccpuLink>
+    <ccpuLink>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?serviceCenter=21&amp;claimNumber=</baseUrl>
+    </ccpuLink>
+    <ccpuLinkCanada>
+      <baseUrl>http://isamt03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?serviceCenter=02&amp;claimNumber=</baseUrl>
+    </ccpuLinkCanada>
+    <PccpuLinkCanada>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0112&amp;serviceCenter=22&amp;policyNumber=</baseUrl>
+    </PccpuLinkCanada>
+    <PccpuLinkWorksite>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0885&amp;serviceCenter=01&amp;policyNumber=</baseUrl>
+    </PccpuLinkWorksite>
+    <grpscndateLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H10B94617I0021018%20A21H10B94617I002101%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22GRPNUMBR%22%2C%22value%22:%22G%22} %2C{%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22} %2C{%22property%22:%22POLICY%22%2C%22value%22:%22TP%22}]&amp;autoRunSearch=true</grpscndateLink>
+    <mgrLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B90159D0000718%20A21H02B90159D000071%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22MNGRCODE%22%2C%22value%22:%22M%22} %2C{%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22}]&amp;autoRunSearch=true</mgrLink>
+    <grpLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B92927B0000818%20A21H02B92927B000081%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22GRPNUMBR%22%2C%22value%22:%22G%22}%2C {%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22}]&amp;autoRunSearch=true</grpLink>
+    <CanadaVendor>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B93543A0000918%20A21H02B93543A000091%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22C%22} ]&amp;autoRunSearch=true</CanadaVendor>
+    <tempDocLink>
+      <baseUrl>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=ICMNLSDB&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A20I28A70318F0000118%20A20I28A70318F000011%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22</baseUrl>
+      <baseUrlPolicy>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A23B09A42120B0011918%20A23B09A42120B001191%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{"property":"POLICY"%2C"value":%22</baseUrlPolicy>
+      <baseUrlPolicybkup>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A23H01A34956I0007718%20A23H01A34956I000771%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[%7B%22property%22:%22POLICY%22,%22value%22:%22</baseUrlPolicybkup>
+      <baseurlbkup>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A21H16A71135H0013718%20A21H16A71135H001371%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[%7B%22property%22:%22itemID%22,%22value%22:%22</baseurlbkup>
+      <searchparam />
+    </tempDocLink>
+    <CMLink>
+      <baseUrl>http://nausd-lapp0073.chubb.com:9081/navigator/</baseUrl>
+    </CMLink>
+    <searchProp>
+      <Predefinedsearch>
+        <predefinedURL>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A22G11A21217J8976518%20A22G11A21217J897651%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22</predefinedURL>
+      </Predefinedsearch>
+    </searchProp>
+  </link>
+  <link id="uw_test">
+    <PccpuLink>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0112&amp;serviceCenter=01&amp;policyNumber=</baseUrl>
+    </PccpuLink>
+    <ccpuLink>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?serviceCenter=21&amp;claimNumber=</baseUrl>
+    </ccpuLink>
+    <ccpuLinkCanada>
+      <baseUrl>http://isamt03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?serviceCenter=02&amp;claimNumber=</baseUrl>
+    </ccpuLinkCanada>
+    <PccpuLinkCanada>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0112&amp;serviceCenter=22&amp;policyNumber=</baseUrl>
+    </PccpuLinkCanada>
+    <PccpuLinkWorksite>
+      <baseUrl>http://ussbycwass2004v:9086/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0885&amp;serviceCenter=01&amp;policyNumber=</baseUrl>
+    </PccpuLinkWorksite>
+    <grpscndateLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H10B94617I0021018%20A21H10B94617I002101%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22GRPNUMBR%22%2C%22value%22:%22G%22} %2C{%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22} %2C{%22property%22:%22POLICY%22%2C%22value%22:%22TP%22}]&amp;autoRunSearch=true</grpscndateLink>
+    <mgrLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B90159D0000718%20A21H02B90159D000071%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22MNGRCODE%22%2C%22value%22:%22M%22} %2C{%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22}]&amp;autoRunSearch=true</mgrLink>
+    <grpLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B92927B0000818%20A21H02B92927B000081%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22GRPNUMBR%22%2C%22value%22:%22G%22}%2C {%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22}]&amp;autoRunSearch=true</grpLink>
+    <CanadaVendor>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B93543A0000918%20A21H02B93543A000091%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22C%22} ]&amp;autoRunSearch=true</CanadaVendor>
+    <tempDocLink>
+      <baseUrl>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=ICMNLSDB&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A20I28A70318F0000118%20A20I28A70318F000011%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22</baseUrl>
+      <baseUrlPolicy>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A23B09A42120B0011918%20A23B09A42120B001191%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{"property":"POLICY"%2C"value":%22</baseUrlPolicy>
+      <baseUrlPolicybkup>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A23H01A34956I0007718%20A23H01A34956I000771%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[%7B%22property%22:%22POLICY%22,%22value%22:%22</baseUrlPolicybkup>
+      <baseurlbkup>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A21H16A71135H0013718%20A21H16A71135H001371%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[%7B%22property%22:%22itemID%22,%22value%22:%22</baseurlbkup>
+      <searchparam />
+    </tempDocLink>
+    <CMLink>
+      <baseUrl>http://nausd-lapp0073.chubb.com:9081/navigator/</baseUrl>
+    </CMLink>
+    <searchProp>
+      <Predefinedsearch>
+        <predefinedURL>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A22G11A21217J8976518%20A22G11A21217J897651%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22</predefinedURL>
+      </Predefinedsearch>
+    </searchProp>
+  </link>
+  <link id="WIMS_UW">
+    <PccpuLinkbkp>
+      <baseUrl>http://isamt03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0885&amp;serviceCenter=01&amp;policyNumber=</baseUrl>
+    </PccpuLinkbkp>
+    <PccpuLinkCanada>
+      <baseUrl>http://Isvap03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0112&amp;serviceCenter=22&amp;policyNumber=</baseUrl>
+    </PccpuLinkCanada>
+    <PccpuLinkWorksite>
+      <baseUrl>http://Isvap03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0885&amp;serviceCenter=01&amp;policyNumber=</baseUrl>
+    </PccpuLinkWorksite>
+    <PccpuLinkNewYork>
+      <baseUrl>http://Isvap03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0885&amp;serviceCenter=03&amp;policyNumber=</baseUrl>
+    </PccpuLinkNewYork>
+    <PccpuLink>
+      <baseUrl>http://Isvap03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?lineOfBusiness=X&amp;reqId=0112&amp;serviceCenter=01&amp;policyNumber=</baseUrl>
+    </PccpuLink>
+    <ccpuLink>
+      <baseUrl>http://Isvap03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?serviceCenter=01&amp;claimNumber=</baseUrl>
+    </ccpuLink>
+    <ccpuLinkCanada>
+      <baseUrl>http://Isvap03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?serviceCenter=02&amp;claimNumber=</baseUrl>
+    </ccpuLinkCanada>
+    <cccpuLinkworksite>
+      <baseUrl>http://Isvap03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?serviceCenter=01&amp;claimNumber=</baseUrl>
+    </cccpuLinkworksite>
+	<cccpuLinkworksiteNY>
+      <baseUrl>http://Isvap03.combinedinsurance.com/CCPU/callCenter/CallCenterEngine?serviceCenter=03&amp;claimNumber=</baseUrl>
+    </cccpuLinkworksiteNY>
+    <grpscndateLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H10B94617I0021018%20A21H10B94617I002101%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22GRPNUMBR%22%2C%22value%22:%22G%22} %2C{%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22} %2C{%22property%22:%22POLICY%22%2C%22value%22:%22TP%22}]&amp;autoRunSearch=true</grpscndateLink>
+    <mgrLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B90159D0000718%20A21H02B90159D000071%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22MNGRCODE%22%2C%22value%22:%22M%22} %2C{%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22}]&amp;autoRunSearch=true</mgrLink>
+    <grpLink>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B92927B0000818%20A21H02B92927B000081%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22GRPNUMBR%22%2C%22value%22:%22G%22}%2C {%22property%22:%22SCANDATE%22%2C%22value%22:%22S%22}]&amp;autoRunSearch=true</grpLink>
+    <CanadaVendor>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnlsdb9%20ICMSearch59%2026%20A1001001A21H02B93543A0000918%20A21H02B93543A000091%2014%201043&amp;mimeType=application%2Fx-searchtemplate.automatic&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22C%22} ]&amp;autoRunSearch=true</CanadaVendor>
+    <tempDocLink>
+      <baseUrl>https://cicacontentmanager.chubb.com/navigator/bookmark.jsp?desktop=cm&amp;repositoryId=cm&amp;repositoryType=cm&amp;docid=87%203%20ICM7%20CM8Prod9%20ICMSearch59%2026%20A1001001A23D18B52702C6288518%20A23D18B52702C628851%2014%201033&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22ID%22%2C%22value%22:%22</baseUrl>
+      <baseUrlPolicy>https://cicacontentmanager.chubb.com/navigator/bookmark.jsp?desktop=cm&amp;repositoryId=cm&amp;repositoryType=cm&amp;docid=88%203%20ICM8%20icmnsdbp9%20ICMSearch59%2026%20A1001001A19H03A22202H9874018%20A19H03A22202H987401%2014%201033&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22POLICY%22,%22value%22:%22</baseUrlPolicy>
+      <baseUrlPolicybkup>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A23H01A34956I0007718%20A23H01A34956I000771%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[%7B%22property%22:%22POLICY%22,%22value%22:%22</baseUrlPolicybkup>
+      <baseurlbkup>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A21H16A71135H0013718%20A21H16A71135H001371%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[%7B%22property%22:%22itemID%22,%22value%22:%22</baseurlbkup>
+      <searchparam />
+    </tempDocLink>
+    <CMLink>
+      <baseUrl>http://nausd-lapp0073.chubb.com:9081/navigator/</baseUrl>
+    </CMLink>
+    <searchProp>
+      <Predefinedsearch>
+        <predefinedURL>http://nausd-lapp0073.chubb.com:9081/navigator/bookmark.jsp?desktop=cm8oddev&amp;repositoryId=cm8dev&amp;repositoryType=cm&amp;docid=86%203%20ICM6%20cm8dev9%20ICMSearch59%2026%20A1001001A22G11A21217J8976518%20A22G11A21217J897651%2014%201043&amp;mimeType=application%2Fx-searchtemplate&amp;template_name=ICMSearch&amp;version=current&amp;searchCriteria=[{%22property%22:%22CM8_DOCID%22%2C%22value%22:%22</predefinedURL>
+      </Predefinedsearch>
+    </searchProp>
+  </link>
+  <link id="CustomTimeout">
+    <MDMTimeOUT>150000</MDMTimeOUT>
+  </link>
+</links>

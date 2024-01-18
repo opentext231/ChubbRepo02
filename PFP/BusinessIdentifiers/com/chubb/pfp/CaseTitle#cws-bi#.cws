@@ -1,0 +1,30 @@
+
+<BusinessIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.businessidentifier.BusinessIdentifier"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8F64-C7772536C1A4">
+	<DocumentID>005056A2-27FA-A1EE-8F64-C777253681A4</DocumentID>
+	<Name>CaseTitle</Name>
+	<Description>CaseTitle</Description>
+	<CreatedBy>Raghu</CreatedBy>
+	<CreationDate>2023-08-18T06:53:17.863</CreationDate>
+	<Notes/>
+	<DataType>1</DataType>
+	<Precision>0</Precision>
+	<TranslatableDescription/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8F64-C7772533C1A4">
+			<DocumentID>005056A2-27FA-A1EE-8F64-C777253381A4</DocumentID>
+			<Name>005056A2-27FA-A1EE-8F64-C777253381A4</Name>
+			<Description>005056A2-27FA-A1EE-8F64-C777253381A4</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-08-18T06:53:17.868</CreationDate>
+			<Notes/>
+			<DeveloperText></DeveloperText>
+			<Identifier/>
+		</TranslatableText>
+	</TranslatableName>
+</BusinessIdentifier>

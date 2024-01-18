@@ -1,0 +1,35 @@
+
+<RoleDesignTime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.organization.role.RoleDesignTime"
+	typeVersion="0242a425-d150-11e7-e026-4d289331252b"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8A5C-D86CABC841A0">
+	<DocumentID>005056A2-27FA-A1EE-8A5C-D86CABC801A0</DocumentID>
+	<Name>PolicyCustomerSearch</Name>
+	<Description>PolicyCustomerSearch</Description>
+	<CreatedBy>Raghu</CreatedBy>
+	<CreationDate>2023-07-23T17:32:53.976</CreationDate>
+	<Notes/>
+	<DistinguishedName>cn=#roleName#, cn=#ISVPName#, #LDAPRoot#</DistinguishedName>
+	<type>Functional</type>
+	<Subroles/>
+	<Superroles/>
+	<configuredTasks>
+		<ConfiguredTask
+			type="com.cordys.task.ConfiguredTask"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BEB-7221061941A0">
+			<DocumentID>005056A2-27FA-A1EE-8BEB-7221061901A0</DocumentID>
+			<Name>cust_005056A2-27FA-A1EE-8BEB-7221061901A0</Name>
+			<Description>cust_005056A2-27FA-A1EE-8BEB-7221061901A0</Description>
+			<CreatedBy>Raghu</CreatedBy>
+			<CreationDate>2023-07-31T14:24:37.542</CreationDate>
+			<Notes/>
+			<configuredTaskParts/>
+			<uiTask>
+				<uri
+					id="005056A2-27FA-A1EE-8BE6-33CC693401A0"
+				/>
+			</uiTask>
+		</ConfiguredTask>
+	</configuredTasks>
+</RoleDesignTime>

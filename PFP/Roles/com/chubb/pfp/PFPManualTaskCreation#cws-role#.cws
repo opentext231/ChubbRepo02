@@ -1,0 +1,35 @@
+
+<RoleDesignTime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.organization.role.RoleDesignTime"
+	typeVersion="0242a425-d150-11e7-e026-4d289331252b"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8BBA-F3E46C0081A0">
+	<DocumentID>005056A2-27FA-A1EE-8BBA-F3E46C0041A0</DocumentID>
+	<Name>PFPManualTaskCreation</Name>
+	<Description>PFPManualTaskCreation</Description>
+	<CreatedBy>Geetha Valaja</CreatedBy>
+	<CreationDate>2023-07-30T15:21:52.583</CreationDate>
+	<Notes/>
+	<DistinguishedName>cn=#roleName#, cn=#ISVPName#, #LDAPRoot#</DistinguishedName>
+	<type>Functional</type>
+	<Subroles/>
+	<Superroles/>
+	<configuredTasks>
+		<ConfiguredTask
+			type="com.cordys.task.ConfiguredTask"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8BBA-F3E46BFE41A0">
+			<DocumentID>005056A2-27FA-A1EE-8BBA-F3E46BFE01A0</DocumentID>
+			<Name>PFP_ManualTaskCreation_005056A2-27FA-A1EE-8BBA-F3E46BFE01A0</Name>
+			<Description>PFP_ManualTaskCreation_005056A2-27FA-A1EE-8BBA-F3E46BFE01A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-30T15:21:52.583</CreationDate>
+			<Notes/>
+			<configuredTaskParts/>
+			<uiTask>
+				<uri
+					id="005056A2-27FA-A1EE-86C5-DCF926D5419F"
+				/>
+			</uiTask>
+		</ConfiguredTask>
+	</configuredTasks>
+</RoleDesignTime>

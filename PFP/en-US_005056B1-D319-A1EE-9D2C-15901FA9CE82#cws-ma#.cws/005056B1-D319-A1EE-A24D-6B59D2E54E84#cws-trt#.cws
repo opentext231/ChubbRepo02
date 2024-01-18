@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="005056B1-D319-A1EE-A24D-6B59D2E58E84">
+	<DocumentID>005056B1-D319-A1EE-A24D-6B59D2E54E84</DocumentID>
+	<Name>005056B1-D319-A1EE-A24D-6B59D2E54E84</Name>
+	<Description>sp_ID_PFP_TO_CLaims_COMPLETION</Description>
+	<CreatedBy>Geetha</CreatedBy>
+	<CreationDate>2023-11-22T12:50:21.531</CreationDate>
+	<Notes/>
+	<Text>sp_ID_PFP_TO_CLaims_COMPLETION</Text>
+	<Language>
+		<uri
+			id="005056B1-D319-A1EE-9D2C-15901FAA4E82"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="005056B1-D319-A1EE-A24D-6B59D2E4CE84"
+		/>
+	</TextIdentifier>
+</TranslatedText>

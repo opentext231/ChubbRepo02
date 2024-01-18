@@ -1,0 +1,30 @@
+
+<BusinessIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.businessidentifier.BusinessIdentifier"
+	RuntimeDocumentID="005056A2-27FA-A1EE-89E0-8D66CC0041A0">
+	<DocumentID>005056A2-27FA-A1EE-89E0-8D66CC0001A0</DocumentID>
+	<Name>SplHandling</Name>
+	<Description>SplHandling</Description>
+	<CreatedBy>Geetha Valaja</CreatedBy>
+	<CreationDate>2023-07-21T06:46:09.829</CreationDate>
+	<Notes/>
+	<DataType>1</DataType>
+	<Precision>0</Precision>
+	<TranslatableDescription/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+			RuntimeDocumentID="005056A2-27FA-A1EE-89E0-8D66CBFD41A0">
+			<DocumentID>005056A2-27FA-A1EE-89E0-8D66CBFD01A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-89E0-8D66CBFD01A0</Name>
+			<Description>005056A2-27FA-A1EE-89E0-8D66CBFD01A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-07-21T06:46:09.829</CreationDate>
+			<Notes/>
+			<DeveloperText></DeveloperText>
+			<Identifier/>
+		</TranslatableText>
+	</TranslatableName>
+</BusinessIdentifier>

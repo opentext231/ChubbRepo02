@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="005056B1-D319-A1EE-A24D-6B59D2D48E84">
+	<DocumentID>005056B1-D319-A1EE-A24D-6B59D2D44E84</DocumentID>
+	<Name>005056B1-D319-A1EE-A24D-6B59D2D44E84</Name>
+	<Description>Status - In Progress</Description>
+	<CreatedBy>Geetha</CreatedBy>
+	<CreationDate>2023-11-22T12:50:21.527</CreationDate>
+	<Notes/>
+	<Text>Status - In Progress</Text>
+	<Language>
+		<uri
+			id="005056B1-D319-A1EE-9D2C-15901FAA4E82"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="005056B1-D319-A1EE-A24D-6B59D2D3CE84"
+		/>
+	</TextIdentifier>
+</TranslatedText>

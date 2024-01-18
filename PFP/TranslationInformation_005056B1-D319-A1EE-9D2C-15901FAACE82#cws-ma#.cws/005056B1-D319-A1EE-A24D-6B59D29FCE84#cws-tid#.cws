@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="005056B1-D319-A1EE-A24D-6B59D2A00E84">
+	<DocumentID>005056B1-D319-A1EE-A24D-6B59D29FCE84</DocumentID>
+	<Name>005056B1-D319-A1EE-A24D-6B59D29FCE84</Name>
+	<Description>Embedded Sub-Process1</Description>
+	<CreatedBy>Geetha</CreatedBy>
+	<CreationDate>2023-11-22T12:50:14.133</CreationDate>
+	<Notes/>
+	<DefaultText>Embedded Sub-Process1</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="005056B1-D319-A1EE-9D2C-15901FAB4E82"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="005056B1-D319-A1EE-A24D-6B59D2A04E84"
+		/>
+	</Translations>
+</TextIdentifier>

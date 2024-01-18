@@ -1,0 +1,253 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="005056A2-27FA-A1EE-8CA9-1C7439BF01A0">
+	<DocumentID>005056A2-27FA-A1EE-8CA9-1C7439BEC1A0</DocumentID>
+	<Name>PFP_FindPopUp</Name>
+	<Description>PFP_FindPopUp</Description>
+	<CreatedBy>Geetha Valaja</CreatedBy>
+	<CreationDate>2023-08-04T09:46:54.599</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead/>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop">
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="nameInp"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="245px auto">
+						<xforms:label
+							textIdentifier="005056A2-27FA-A1E9-8BB5-2250968FC142"
+							wcpforms:class="h_label left_align"
+							wcpforms:size="80px null">Name</xforms:label>
+						<xforms:hint
+							textIdentifier="005056A2-27FA-A1EA-A158-D11C1872815A">All-*,Filter Data:Example:search name-sea%me</xforms:hint>
+					</xforms:input>
+					<xforms:group
+						appearance="controlbox"
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsControlbox"
+						id="controlbox1"
+						controltype="button"
+						wcpforms:layout="horizontal"
+						wcpforms:class="v_layout"
+						wcpforms:align="left_align"
+						wcpforms:size="277px 36px">
+						<xforms:trigger
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+							id="OkBtn"
+							wcpforms:class="h_button"
+							wcpforms:size="null 22px">
+							<xforms:label
+								textIdentifier="005056A2-27FA-A1EE-8CAA-B264D05BC1A0">Ok</xforms:label>
+							<xforms:action
+								ev:event="xforms-activate">
+								<xforms:OkBtn_Click/>
+							</xforms:action>
+						</xforms:trigger>
+						<xforms:trigger
+							wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsButton"
+							id="CancelBtn"
+							wcpforms:class="h_button"
+							wcpforms:size="null 22px">
+							<xforms:label
+								textIdentifier="005056A2-27FA-A1EE-89B2-743CAA72C1A0">Cancel</xforms:label>
+							<xforms:action
+								ev:event="xforms-activate">
+								<xforms:CancelBtn_Click/>
+							</xforms:action>
+						</xforms:trigger>
+					</xforms:group>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[function Form_InitDone(eventObject)
+{
+    var lbl=application.event.data.label;
+    nameInp.setLabel(lbl);
+}
+function CancelBtn_Click(eventObject)
+{
+    nameInp.setValue("");
+    application.container.close();
+}
+function OkBtn_Click(eventObject)
+{
+        application.container.close();
+
+}
+function dialogReturnValue()
+{
+  var obj=new Object();
+  obj.value=nameInp.getValue();
+  return obj;
+    
+}
+function Form_Init(eventObject)
+{
+   application.setDialogSize("350px", "110px");
+
+}
+]]>
+			</xformsscript>
+			<xforms:action
+				ev:event="xforms-initialize-done">
+				<xforms:Form_InitDone/>
+			</xforms:action>
+			<xforms:action
+				ev:event="xforms-init">
+				<xforms:Form_Init/>
+			</xforms:action>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<imageUrl></imageUrl>
+	<info></info>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<isPublicImage>false</isPublicImage>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>PFP_FindPopUp</taskDescription>
+	<taskName>PFP_FindPopUp</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts/>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets/>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8CAA-B264D05981A0">
+			<DocumentID>005056A2-27FA-A1EE-8CAA-B264D05941A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8CAA-B264D05941A0</Name>
+			<Description>005056A2-27FA-A1EE-8CAA-B264D05941A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-04T09:46:54.599</CreationDate>
+			<Notes/>
+			<DeveloperText></DeveloperText>
+			<Identifier/>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8CAA-B264D05F01A0">
+			<DocumentID>005056A2-27FA-A1EE-8CAA-B264D05EC1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8CAA-B264D05EC1A0</Name>
+			<Description>005056A2-27FA-A1EE-8CAA-B264D05EC1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-04T09:46:54.599</CreationDate>
+			<Notes/>
+			<UIRef>OkBtn</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8CAA-B264D05B81A0">
+					<DocumentID>005056A2-27FA-A1EE-8CAA-B264D05B41A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8CAA-B264D05B41A0</Name>
+					<Description>005056A2-27FA-A1EE-8CAA-B264D05B41A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-08-04T09:46:54.599</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8CA9-1C7439BEC1A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8CAA-B264D05E01A0">
+			<DocumentID>005056A2-27FA-A1EE-8CAA-B264D05DC1A0</DocumentID>
+			<Name>005056A2-27FA-A1EE-8CAA-B264D05DC1A0</Name>
+			<Description>005056A2-27FA-A1EE-8CAA-B264D05DC1A0</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-04T09:46:54.604</CreationDate>
+			<Notes/>
+			<UIRef>CancelBtn</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+					RuntimeDocumentID="005056A2-27FA-A1EE-8CAA-B264D05D01A0">
+					<DocumentID>005056A2-27FA-A1EE-8CAA-B264D05CC1A0</DocumentID>
+					<Name>005056A2-27FA-A1EE-8CAA-B264D05CC1A0</Name>
+					<Description>005056A2-27FA-A1EE-8CAA-B264D05CC1A0</Description>
+					<CreatedBy>Geetha Valaja</CreatedBy>
+					<CreationDate>2023-08-04T09:46:54.599</CreationDate>
+					<Notes/>
+					<DeveloperText></DeveloperText>
+					<Identifier/>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="005056A2-27FA-A1EE-8CA9-1C7439BEC1A0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="005056A2-27FA-A1EE-8CAA-B264D05B01A0">
+			<DocumentID>005056A2-27FA-A1EE-8CAA-B264D05AC1A0</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>Geetha Valaja</CreatedBy>
+			<CreationDate>2023-08-04T09:46:54.599</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

@@ -1,0 +1,26 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="005056B1-D319-A1EE-9F4E-9BAB00174E83">
+	<DocumentID>005056B1-D319-A1EE-9F4E-9BAB00170E83</DocumentID>
+	<Name>005056B1-D319-A1EE-9F4E-9BAB00170E83</Name>
+	<Description>Temporary
+  Claim Number</Description>
+	<CreatedBy>Pradeep</CreatedBy>
+	<CreationDate>2023-11-07T06:57:09.982</CreationDate>
+	<Notes/>
+	<DefaultText>Temporary
+  Claim Number</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="005056B1-D319-A1EE-9D2C-15901FAB4E82"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="005056B1-D319-A1EE-9F4E-9BAB00178E83"
+		/>
+	</Translations>
+</TextIdentifier>
